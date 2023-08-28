@@ -1,2 +1,7 @@
 Através dessa da eu serei capaz de aprender a manipular o GIT & GitHub.
- 
+
+ ### NOVA FEATURE! ###
+
+ AGORA O PROGRAMA TAMBÉM POSSUI UMA BARRA DE NAVEGAÇÃO!
+
+ >-<
