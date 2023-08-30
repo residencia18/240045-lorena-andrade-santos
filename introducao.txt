@@ -2,4 +2,8 @@ Introdução ao Uso de Repositório Git/Github
 
 Nessa abordagem, estamos aplicando os conhecimentos relacionados ao versionamento de código utilizando Git, juntamente com a hospedagem de repositórios Github.
 
+<<<<<<< HEAD
 Adicionando novas funcionalidades e fazendo o commit da nova branch criada: "feature-navbar"
+=======
+Foi criada a branch "feature-navbar"
+>>>>>>> 2a8796f (nova branch)
