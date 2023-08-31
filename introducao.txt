@@ -7,7 +7,4 @@ Adicionando novas funcionalidades e fazendo o commit da nova branch criada: "fea
 =======
 Foi criada a branch "feature-navbar"
 >>>>>>> 2a8796f (nova branch)
-
-
-
-uma nova linha
+35123132123121321321
