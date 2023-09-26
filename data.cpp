@@ -80,24 +80,29 @@ struct Data {
         return numero_string;
     }
 
-    string dataParaString(struct Data data, char op, string format)
+    string dataParaString(struct Data data, string format = "pt-br")
     {
         string dia = to_string_zeros(data.dia);
         string mes = to_string_zeros(data.mes);
         string ano = to_string_zeros(data.ano);
 
         //Default
-        if (format==""){
-            return dia+op+mes+op+ano;
-        }else{
-            return dia+op+mes+op+ano;
-        }
+        if (format=="iso")
+            return ano+"/"+mes+"/"+dia;
+        else if (format=="en-us")
+            return mes+"/"+dia+"/"+ano;
+        else
+            return dia+"/"+mes+"/"+ano;
         
     }
 
-    Data string_to_data(string strData, char op){
-
-    }
-
-    
-}
+    Data string_to_data(string strData, string &erro)
+    {
+        int dia = stoi(strData.substr(0, 2));
+        int mes = stoi(strData.substr(3, 2));
+        int ano = stoi(strData.substr(6, 4));
+        
+        Data data = inicializarData(dia, mes, ano, erro);
+        return data;
+    }   
+};
