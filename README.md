@@ -5,4 +5,5 @@
   - Daniel Oliveira
   - Leandro Grarcia
   - Lorena Andrade
+  - Nathalie Lima
 
