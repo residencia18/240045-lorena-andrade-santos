@@ -3,20 +3,22 @@
 
 #include <string>
 using namespace std;
-struct Data {
+class Data {
     private:
-    int dia;
-    int mes;
-    int ano;
-
+        int dia;
+        int mes;
+        int ano;
+        string msgErro;
     public:
-    Data inicializarData(int dia, int mes, int ano, string &erro);
-    bool dataValida(int dia, int mes, int ano, string &erro);
-    bool dataValida(Data data);
-    void alteraData(Data *data, int dia, int mes, int ano);
-    string to_string_zeros(int numero);
-    string dataParaString(Data data);
-    Data string_to_data(string strData, char op);
+        Data();
+        ~Data();
+        Data(int dia, int mes, int ano);
+        string dataValida(int dia, int mes, int ano);
+        string alteraData(int dia, int mes, int ano);
+        string to_string_zeros(int numero);
+        string dataParaString(string format = "pt-br");
+        string dataPorExtenso();
+        string getErro();
 };
 
 
