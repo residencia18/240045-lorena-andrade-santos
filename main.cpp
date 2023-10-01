@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 #define TRACO "-------------------------------------"
 
 using namespace std;
@@ -48,9 +49,15 @@ int main()
         cout << "Resultado: " << soma(calc) << endl;
         break;
 
+
+    case '-':
+        cout << "Resultado: " << setprecision(2) << subtracao(calc) << endl;;
+        break;
+
     // case '-':
     //     subtracao(calc);
     //     break;
+
 
     // case '*':
     //     multiplicacao(calc);
@@ -76,4 +83,10 @@ int main()
 float soma(Calculadora& calc)
 {    
 return calc.operando1 + calc.operando2;
+
+}
+
+// Função subtração
+float subtracao(Calculadora& calc){    
+    return calc.operando1 - calc.operando2;
 }
