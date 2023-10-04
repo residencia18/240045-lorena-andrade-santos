@@ -6,73 +6,84 @@
 using namespace std;
 
 // ESPAÇO PARA AS STRUCTS ---------------
-
+// Struct para representar um livro na biblioteca
 struct Livro
 {
     string titulo = "";
     string autor;
-    string genero;
+    int ano_publicacao;
     int disponibilidade = 0; //O tipo pode ser alterado depois!
 };
+// Struct para representar um leitor da biblioteca
+//vector<Livro> livrosEmprestados
+struct Leitor {
 
-struct Biblioteca
-{
+
+}
+// Struct para representar uma estante da biblioteca
+
+/*string genero;
+    vector<Livro> livrosNaEstante;*/
+struct Estante {
+    
+};
+
+// Struct para representar a biblioteca como um todo
+struct Biblioteca {
     string nome;
-    string endereco;
-    Livro livro;
-  //Leitor leitor;
+    vector<Estante> estantes;
+    vector<Leitor> leitores;
 };
 
 // ESPAÇO PARA AS STRUCTS ---------------
-
-void adicionaLivro(vector<Livro> &livros);// Insere um aluno e suas notas
+// Funcionalidades
+// void adicionarLivroNaEstante(Estante& estante, const Livro& livro);
+// void emprestarLivro(Leitor& leitor, Livro& livro);
+// void devolverLivro(Leitor& leitor, Livro& livro);
+// void listarLivrosNaEstante(const Estante& estante);
+// void listarLivrosEmprestados(const Leitor& leitor);
 
 int main()
 {
 
-char resposta;
-bool continuar = false;
+// // Criando alguns livros
+//     Livro livro1 = {"Dom Casmurro", "Machado de Assis", 1899};
+//     Livro livro2 = {"A Moreninha", "Joaquim Manuel de Macedo", 1844};
+//     Livro livro3 = {"Memórias Póstumas de Brás Cubas", "Machado de Assis", 1881};
 
-    vector<Livro> livros;
+//     // Criando algumas estantes
+//     Estante estante1 = {"Romance", {livro1, livro2}};
+//     Estante estante2 = {"Ficção Científica", {livro3}};
 
-    do
-    {
-            adicionaLivro(livros);
-            cout << "Deseja adicionar mais um livro? (s/n): " << endl;
-            cin >> resposta;
+//     // Criando alguns leitores
+//     Leitor leitor1 = {"Alice", 28, {livro1}};
+//     Leitor leitor2 = {"Bob", 32, {livro2}};
 
-            if (resposta == 's' || resposta == 'S')
-                continuar = true;
-            else
-            {
-                continuar = false;
-            }
-        
-    } while (continuar);
+//     // Criando a biblioteca
+//     Biblioteca minhaBiblioteca = {"Biblioteca Municipal", {estante1, estante2}, {leitor1, leitor2}};
 
     return 0; 
 }
 
-void adicionaLivro(vector<Livro> &livros){
+// void adicionarLivroNaEstante(Estante& estante, const Livro& livro) {
+//     // Adicionar o livro à estante
+// }
 
-    Biblioteca biblioteca;
-    string nome;
-    
-    do
-    {
-        cout << "Informe o título do livro: ";
-        cin.ignore();
-        getline(cin, nome);
-    } while (nome == "");
+// void emprestarLivro(Leitor& leitor, Livro& livro) {
+//     // Verificar se o livro está na estante
+//     // Se sim, emprestar o livro ao leitor e removê-lo da estante
+//     // Adicionar o livro à lista de livros emprestados do leitor
+// }
 
-    cout << "Informe o nome do autor: ";
-    cin >> biblioteca.livro.autor;
+// void devolverLivro(Leitor& leitor, Livro& livro) {
+//     // Verificar se o livro está na lista de livros emprestados do leitor
+//     // Se sim, devolver o livro à estante e removê-lo da lista de livros emprestados
+// }
 
-    cout << "Informe o gênero do livro: ";
-    cin >> biblioteca.livro.genero;
+// void listarLivrosNaEstante(const Estante& estante) {
+//     // Listar todos os livros na estante (título, autor, ano de publicação)
+// }
 
-    biblioteca.livro.disponibilidade += 1; // Talvez haja a necessidade de alterar.
-
-    biblioteca.livro.titulo = nome; 
-
-}
+// void listarLivrosEmprestados(const Leitor& leitor) {
+//     // Listar todos os livros emprestados pelo leitor (título, autor, ano de publicação)
+// }
