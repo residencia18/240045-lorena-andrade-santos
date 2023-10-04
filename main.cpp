@@ -15,17 +15,16 @@ struct Livro
     int disponibilidade = 0; //O tipo pode ser alterado depois!
 };
 // Struct para representar um leitor da biblioteca
-//vector<Livro> livrosEmprestados
 struct Leitor {
+    // string nome;
+    // int idade;
+    // vector<Livro> livrosEmprestados;
+};
 
-
-}
 // Struct para representar uma estante da biblioteca
-
-/*string genero;
-    vector<Livro> livrosNaEstante;*/
 struct Estante {
-    
+//    string genero;
+//    vector<Livro> livrosNaEstante;
 };
 
 // Struct para representar a biblioteca como um todo
