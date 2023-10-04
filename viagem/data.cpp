@@ -90,15 +90,14 @@ using namespace std;
     {
         string diaStr = to_string_zeros(dia);
         string mesStr = to_string_zeros(mes);
-        string anoStr = to_string_zeros(ano);
-
+        
         // Default
         if (format == "iso")
-            return to_string(ano) + "/" + to_string(mes) + "/" + to_string(dia);
+            return to_string(ano) + "/" + mesStr + "/" + diaStr;
         else if (format == "en-us")
-            return to_string(mes) + "/" + to_string(dia) + "/" + to_string(ano);
+            return mesStr + "/" + diaStr + "/" + to_string(ano);
         else
-            return to_string(dia) + "/" + to_string(mes) + "/" + to_string(ano);
+            return diaStr + "/" + mesStr + "/" + to_string(ano);
     }
 
    string Data :: dataPorExtenso()
