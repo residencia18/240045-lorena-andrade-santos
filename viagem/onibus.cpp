@@ -26,9 +26,80 @@ struct viagem
     int numero[40];
     vector<assento> passageiro;
 };
+int verificaSeViagemExiste(vector<viagem> onibus, string Origem, string Destino, Data dataSaida, int hora);
+int inicializaViagem(vector<viagem> &onibus, string Origem, string Destino, Data dataSaida, int hora);
+void venderPassagem(vector<viagem> &onibus);
+void mostrarOnibus(vector<viagem> &onibus);
+void totalArrecadadoViagem(vector<viagem> onibus);
+void totalArrecadadoMes(vector<viagem> onibus);
+void nomePassageiroPoltrona(vector<viagem> onibus);
+void horarioMaisRentavel(vector<viagem> onibus);
+void mediaIdadePassageirosDeUmaDeterminadaViagem(vector<viagem> &onibus);
+void mediaIdadePassageiros(vector<viagem> &onibus);
 
-int verificaSeViagemExiste(vector<viagem> onibus, string Origem, string Destino, Data dataSaida, int hora)
+int main()
 {
+    vector<viagem> onibus;
+
+    int opcao;
+    bool sair = false;
+    do
+    {
+        cout << TRACO << endl;
+        cout << "Menu" << endl;
+        cout << TRACO << endl;
+        cout << "Opcao 1: Vender passagem" << endl;
+        cout << "Opcao 2: Total Arrecadado para uma determinada viagem" << endl;
+        cout << "Opcao 3: Total Arrecadado para uma determinado mẽs" << endl;
+        cout << "Opcao 4: Nome do passageiro de uma determinada poltrona P de uma determinada viagem" << endl;
+        cout << "Opcao 5: Horário de viagem mais rentavel" << endl;
+        cout << "Opcao 6: Media de idade dos passageiros" << endl;
+        cout << "Opcao 0: Sair" << endl;
+        cout << TRACO << endl;
+
+        cin >> opcao;
+        switch (opcao)
+        {
+        case (1):
+            venderPassagem(onibus);
+            mostrarOnibus(onibus);
+            break;
+        case (2):
+            totalArrecadadoViagem(onibus);
+
+            break;
+        case (3):
+            /*Total Arrecadado para uma determinado mẽs*/
+            totalArrecadadoMes(onibus);
+            break;
+        case (4):
+            /* Nome do passageiro de uma determinada poltrona P de uma determinada viagem */
+            nomePassageiroPoltrona(onibus);
+            break;
+
+        case (5):
+            /* Nome do passageiro de uma determinada poltrona P de uma determinada viagem */
+            horarioMaisRentavel(onibus);
+            break;
+
+        case (6):
+            /* Media de idade dos passageiros */
+            mediaIdadePassageiros(onibus);
+            break;
+        case (0):
+            sair = true;
+            break;
+        default:
+            cout << "Opção invalida. Tente novamente." << endl;
+            break;
+        }
+    } while (!sair);
+
+    return 0;
+}
+
+
+int verificaSeViagemExiste(vector<viagem> onibus, string Origem, string Destino, Data dataSaida, int hora){
     int indice = -1;
 
     for (int i = 0; i < onibus.size(); i++)
@@ -43,8 +114,7 @@ int verificaSeViagemExiste(vector<viagem> onibus, string Origem, string Destino,
     return indice;
 }
 
-int inicializaViagem(vector<viagem> &onibus, string Origem, string Destino, Data dataSaida, int hora)
-{
+int inicializaViagem(vector<viagem> &onibus, string Origem, string Destino, Data dataSaida, int hora){
     viagem viagemAtual;
     viagemAtual.cidadeOrigem = Origem;
     viagemAtual.cidadeDestino = Destino;
@@ -61,8 +131,7 @@ int inicializaViagem(vector<viagem> &onibus, string Origem, string Destino, Data
     return (onibus.size() - 1);
 }
 
-void venderPassagem(vector<viagem> &onibus)
-{
+void venderPassagem(vector<viagem> &onibus){
     char rota;
     int hora;
     string origemStr, destinoStr, dataSaida;
@@ -181,9 +250,8 @@ void venderPassagem(vector<viagem> &onibus)
         cout << "Onibus cheio!" << endl;
     }
 }
-//<< " em " << viagem.dataSaida.dataParaString()
-void mostrarOnibus(vector<viagem> &onibus)
-{
+
+void mostrarOnibus(vector<viagem> &onibus){
     cout << "Lista de ônibus cadastrados com os passageiros:" << endl;
     string dataStr;
     for (int i = 0; i < onibus.size(); i++)
@@ -203,8 +271,7 @@ void mostrarOnibus(vector<viagem> &onibus)
     }
 }
 
-void totalArrecadadoViagem(vector<viagem> onibus)
-{
+void totalArrecadadoViagem(vector<viagem> onibus){
     char rota;
     int hora;
     string origemStr, destinoStr, dataSaida;
@@ -267,8 +334,7 @@ void totalArrecadadoViagem(vector<viagem> onibus)
     }
 }
 
-void totalArrecadadoMes(vector<viagem> onibus)
-{
+void totalArrecadadoMes(vector<viagem> onibus){
     int mes;
     cout << "Digite o mês" << endl;
     cin >> mes;
@@ -293,8 +359,8 @@ void totalArrecadadoMes(vector<viagem> onibus)
         cout << TRACO << endl;
     }
 }
-void nomePassageiroPoltrona(vector<viagem> onibus)
-{
+
+void nomePassageiroPoltrona(vector<viagem> onibus){
     int hora, poltrona;
     char rota;
     string origemStr, destinoStr, dataSaida;
@@ -389,8 +455,8 @@ void nomePassageiroPoltrona(vector<viagem> onibus)
         cout << "Viagem não encontrada." << endl;
     }
 }
-void horarioMaisRentavel(vector<viagem> onibus)
-{
+
+void horarioMaisRentavel(vector<viagem> onibus){
     char rota;
     string origemStr, destinoStr, dataSaida;
 
@@ -440,8 +506,7 @@ void horarioMaisRentavel(vector<viagem> onibus)
     }
 }
 
-void mediaIdadePassageirosDeUmaDeterminadaViagem(vector<viagem> &onibus)
-{
+void mediaIdadePassageirosDeUmaDeterminadaViagem(vector<viagem> &onibus){
     char rota;
     int hora;
     string origemStr, destinoStr, dataSaida;
@@ -533,8 +598,7 @@ void mediaIdadePassageirosDeUmaDeterminadaViagem(vector<viagem> &onibus)
     }
 }
 
-void mediaIdadePassageiros(vector<viagem> &onibus)
-{
+void mediaIdadePassageiros(vector<viagem> &onibus){
     int totalIdades = 0;
     int numPassageiros = 0;
     for (int i = 0; i < onibus.size(); i++)
@@ -558,64 +622,4 @@ void mediaIdadePassageiros(vector<viagem> &onibus)
     {
         cout << "Não existe passageiro registrado em nenhuma viagem." << endl;
     }
-}
-int main()
-{
-    vector<viagem> onibus;
-
-    int opcao;
-    bool sair = false;
-    do
-    {
-        cout << TRACO << endl;
-        cout << "Menu" << endl;
-        cout << TRACO << endl;
-        cout << "Opcao 1: Vender passagem" << endl;
-        cout << "Opcao 2: Total Arrecadado para uma determinada viagem" << endl;
-        cout << "Opcao 3: Total Arrecadado para uma determinado mẽs" << endl;
-        cout << "Opcao 4: Nome do passageiro de uma determinada poltrona P de uma determinada viagem" << endl;
-        cout << "Opcao 5: Horário de viagem mais rentavel" << endl;
-        cout << "Opcao 6: Media de idade dos passageiros" << endl;
-        cout << "Opcao 0: Sair" << endl;
-        cout << TRACO << endl;
-
-        cin >> opcao;
-        switch (opcao)
-        {
-        case (1):
-            venderPassagem(onibus);
-            mostrarOnibus(onibus);
-            break;
-        case (2):
-            totalArrecadadoViagem(onibus);
-
-            break;
-        case (3):
-            /*Total Arrecadado para uma determinado mẽs*/
-            totalArrecadadoMes(onibus);
-            break;
-        case (4):
-            /* Nome do passageiro de uma determinada poltrona P de uma determinada viagem */
-            nomePassageiroPoltrona(onibus);
-            break;
-
-        case (5):
-            /* Nome do passageiro de uma determinada poltrona P de uma determinada viagem */
-            horarioMaisRentavel(onibus);
-            break;
-
-        case (6):
-            /* Media de idade dos passageiros */
-            mediaIdadePassageiros(onibus);
-            break;
-        case (0):
-            sair = true;
-            break;
-        default:
-            cout << "Opção invalida. Tente novamente." << endl;
-            break;
-        }
-    } while (!sair);
-
-    return 0;
 }
