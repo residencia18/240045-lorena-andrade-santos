@@ -43,7 +43,7 @@ struct Devolucao{
 struct Leitor {
     int idCartaoDeCadastro;
     string nome;
-    int idade;
+    string  dataDeNascimeto;
     string endereço;
     string telefone;
     string email;
