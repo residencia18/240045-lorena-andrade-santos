@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <iomanip>
+#include <map>
 #define TRACO "---------------------------------------------------------------------------------------------------"
 using namespace std;
 
@@ -9,80 +10,64 @@ using namespace std;
 // Struct para representar um livro na biblioteca
 struct Livro
 {
+    int codigo_do_livro;
     string titulo = "";
     string autor;
     int ano_publicacao;
     int disponibilidade = 0; //O tipo pode ser alterado depois!
-};
-// Struct para representar um leitor da biblioteca
-struct Leitor {
-    // string nome;
-    // int idade;
-    // vector<Livro> livrosEmprestados;
+    
 };
 
 // Struct para representar uma estante da biblioteca
-struct Estante {
-//    string genero;
-//    vector<Livro> livrosNaEstante;
+struct Estante { 
+    string nomeDaEstante;
+    vector<Livro> livrosNaEstante;//adicionar livros na estante baseado em uma ordem especifica
+};
+
+
+//Estrucut para reresentar emprestimo de livros
+struct Emprestimo {
+    int codigoLivro; //codigo para busca de livros
+    int idCartaoDeCadastro; //codigo de busca de usuairo para o emprestimo;
+    string dataDeEmprestimo; //registrar a data de emprestimo
+    string dataPrevistaDeDevolucao;//registrar a data prevista de devolução
+};
+//estrutura de devoluções;
+struct Devolucao{
+    int codigoLivro;
+    string dataDeDevolucao;
+};
+
+
+// Struct para representar um usuario da biblioteca.
+struct Leitor {
+    int idCartaoDeCadastro;
+    string nome;
+    int idade;
+    string endereço;
+    string telefone;
+    string email;
+    bool altorizao; //caso tenha alguma pendencia posso bloquear o acesso aos emprestimo.
+    Emprestimo livrosEmprestados[5];//maximo de emprestimos
+    vector<Devolucao> devolucoes; //historio de devoluções
+
 };
 
 // Struct para representar a biblioteca como um todo
 struct Biblioteca {
-    string nome;
-    vector<Estante> estantes;
-    vector<Leitor> leitores;
+    string nomeDaInstituicao;
+    map<string, Estante> estantes; // Usando um mapa para mapear nomes de estantes para estantes
+    vector<Leitor> leitores; //cria o registro de usuarios/
+    vector<Emprestimo> emprestimos; //cria o registro de emprestimo
+    vector<Devolucao> devolucoes; //cria o registro de devoluções
 };
 
-// ESPAÇO PARA AS STRUCTS ---------------
-// Funcionalidades
-// void adicionarLivroNaEstante(Estante& estante, const Livro& livro);
-// void emprestarLivro(Leitor& leitor, Livro& livro);
-// void devolverLivro(Leitor& leitor, Livro& livro);
-// void listarLivrosNaEstante(const Estante& estante);
-// void listarLivrosEmprestados(const Leitor& leitor);
+
 
 int main()
 {
 
-// // Criando alguns livros
-//     Livro livro1 = {"Dom Casmurro", "Machado de Assis", 1899};
-//     Livro livro2 = {"A Moreninha", "Joaquim Manuel de Macedo", 1844};
-//     Livro livro3 = {"Memórias Póstumas de Brás Cubas", "Machado de Assis", 1881};
-
-//     // Criando algumas estantes
-//     Estante estante1 = {"Romance", {livro1, livro2}};
-//     Estante estante2 = {"Ficção Científica", {livro3}};
-
-//     // Criando alguns leitores
-//     Leitor leitor1 = {"Alice", 28, {livro1}};
-//     Leitor leitor2 = {"Bob", 32, {livro2}};
-
-//     // Criando a biblioteca
-//     Biblioteca minhaBiblioteca = {"Biblioteca Municipal", {estante1, estante2}, {leitor1, leitor2}};
 
     return 0; 
 }
 
-// void adicionarLivroNaEstante(Estante& estante, const Livro& livro) {
-//     // Adicionar o livro à estante
-// }
-
-// void emprestarLivro(Leitor& leitor, Livro& livro) {
-//     // Verificar se o livro está na estante
-//     // Se sim, emprestar o livro ao leitor e removê-lo da estante
-//     // Adicionar o livro à lista de livros emprestados do leitor
-// }
-
-// void devolverLivro(Leitor& leitor, Livro& livro) {
-//     // Verificar se o livro está na lista de livros emprestados do leitor
-//     // Se sim, devolver o livro à estante e removê-lo da lista de livros emprestados
-// }
-
-// void listarLivrosNaEstante(const Estante& estante) {
-//     // Listar todos os livros na estante (título, autor, ano de publicação)
-// }
-
-// void listarLivrosEmprestados(const Leitor& leitor) {
-//     // Listar todos os livros emprestados pelo leitor (título, autor, ano de publicação)
-// }
