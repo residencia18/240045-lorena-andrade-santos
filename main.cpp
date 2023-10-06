@@ -24,11 +24,11 @@ int main()
     cout << "========== CALCULADORA ==========" << endl;
     cout << endl;
 
-    cout << "Insira o primeiro operador: ";
+    cout << "Insira o primeiro número: ";
     cin >> calc.operando1;
     cout << endl;
 
-    cout << "Insira o segundo operador: ";
+    cout << "Insira o segundo número: ";
     cin >> calc.operando2;
     cout << endl << endl;
 
@@ -52,19 +52,13 @@ int main()
             cout << "Resultado: " << soma(calc) << endl;
             break;
 
-
         case '-':
             cout << "Resultado: " << setprecision(2) << subtracao(calc) << endl;
             break;
 
-        // case '-':
-        //     subtracao(calc);
-        //     break;
-
-
-        // case '*':
-        //     multiplicacao(calc);
-        //     break;
+        case '*':
+            cout << "Resultado: " << setprecision(2) << multiplicacao(calc) << endl;
+            break;
 
         case '/':
             cout << "Resultado: " << setprecision(2) << divisao(calc) << endl;
@@ -94,6 +88,7 @@ float subtracao(Calculadora& calc){
     return calc.operando1 - calc.operando2;
 }
 
+// Função divisão
 float divisao(Calculadora& calc) {
     if (calc.operando2 == 0)
     {
@@ -101,4 +96,10 @@ float divisao(Calculadora& calc) {
     }
     
     return calc.operando1 / calc.operando2;
+}
+
+// Função multiplicação
+float multiplicacao(Calculadora& calc)
+{
+    return calc.operando1 * calc.operando2;
 }
