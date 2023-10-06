@@ -38,7 +38,6 @@ struct Devolucao{
     string dataDeDevolucao;
 };
 
-
 // Struct para representar um usuario da biblioteca.
 struct Leitor {
     int idCartaoDeCadastro;
@@ -51,6 +50,23 @@ struct Leitor {
     Emprestimo livrosEmprestados[5];//maximo de emprestimos
     vector<Devolucao> devolucoes; //historio de devoluções
 
+};
+
+// Struct para representar a contratação de serviços terceirizados
+struct EmpresaTerceirizada
+{
+    string servico;
+    string nome_empresa;
+    int duracao_contrato;
+    int inicio_contrato;
+    int quantidade_funcionarios;
+};
+
+// Struct para representar um espaço com mesas na biblioteca destinado à leitura
+struct EspacoLeitura
+{
+    int codigo_mesas[5];
+    bool ocupacao_mesas[5];
 };
 
 // Struct para representar a biblioteca como um todo
@@ -69,7 +85,6 @@ struct Bibliotecaria
     int idade;
     float salario;
 };
-
 
 
 
