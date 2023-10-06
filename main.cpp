@@ -62,6 +62,15 @@ struct Biblioteca {
     vector<Devolucao> devolucoes; //cria o registro de devoluções
 };
 
+struct Bibliotecaria
+{
+    string matricula;
+    string nome;
+    int idade;
+    float salario;
+};
+
+
 
 
 int main()
