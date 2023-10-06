@@ -1,2 +1,8 @@
+.vscode/
+*.exe
+*.json
+output/
+lorena/
 output/
 .vscode/
+
