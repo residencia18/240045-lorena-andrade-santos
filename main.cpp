@@ -63,9 +63,9 @@ int main()
     //     multiplicacao(calc);
     //     break;
 
-    // case '/':
-    //     divisao(calc);
-    //     break;
+    case '/':
+        divisao(calc);
+        break;
 
     case '0':
         cout << "Programa finalizado.";
@@ -82,11 +82,19 @@ int main()
 // Função soma
 float soma(Calculadora& calc)
 {    
-return calc.operando1 + calc.operando2;
-
+    return calc.operando1 + calc.operando2;
 }
 
 // Função subtração
 float subtracao(Calculadora& calc){    
     return calc.operando1 - calc.operando2;
+}
+
+float divisao(Calculadora& calc) {
+    if (calc.operando2 == 0)
+    {
+        return calc.operando1;
+    }
+    
+    return calc.operando1 / calc.operando2;
 }
