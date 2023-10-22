@@ -136,7 +136,7 @@ public:
         meioDeTransporte = "";
     }
     Deslocamento(string _meioDeTransporte) {
-        meioDeTransporte = _meioDeTransporte
+        meioDeTransporte = _meioDeTransporte;
     }
 };
 
