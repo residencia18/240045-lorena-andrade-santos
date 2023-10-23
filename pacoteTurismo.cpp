@@ -13,6 +13,32 @@ private:
 public:
     ~Evento(){
 
+    //Construtor
+    PacoteTurismo ::  ~PacoteTurismo(){
+
+    }
+    PacoteTurismo :: PacoteTurismo(){
+        nome = "";
+    }
+    PacoteTurismo :: PacoteTurismo(
+        string _nome, 
+        Evento _evento, 
+        Roteiro _roteiro, 
+        Deslocamento _deslocamento, 
+        Pernoite _pernoite){
+        nome = _nome;
+        evento = _evento;
+        roteiro = _roteiro;
+        deslocamento = _deslocamento;
+        pernoite = _pernoite;
+    }        
+    string PacoteTurismo :: getNome(){
+        return nome;
+    }
+
+   //Destrutor
+   Evento :: ~Evento(){
+
     }
     Evento :: Evento(){
         nome = "";

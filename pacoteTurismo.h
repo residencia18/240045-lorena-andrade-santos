@@ -17,7 +17,7 @@ public:
     void setNome(string _nome);
     int getVagas();
     void setVagas(int _vagas);
-    // Adicione métodos relevantes para a classe Evento, se necessário.
+    
 };
 
 class Roteiro {
@@ -29,7 +29,6 @@ public:
     Roteiro();
     Roteiro(string _descricao);
 
-    // Adicione métodos relevantes para a classe Roteiro, se necessário.
 };
 
 class Deslocamento {
@@ -40,8 +39,6 @@ public:
     ~Deslocamento();
     Deslocamento();
     Deslocamento(string _meioDeTransporte);
-
-    // Adicione métodos relevantes para a classe Deslocamento, se necessário.
 };
 
 class Pernoite {
@@ -53,7 +50,6 @@ public:
     Pernoite();
     Pernoite(std::string _hotel);
 
-    // Adicione métodos relevantes para a classe Pernoite, se necessário.
 };
 
 class PacoteTurismo {
@@ -68,13 +64,13 @@ public:
     ~PacoteTurismo();
     PacoteTurismo();
     PacoteTurismo(
-        string _nome,
-        Evento _evento,
-        Roteiro _roteiro,
-        Deslocamento _deslocamento,
-        Pernoite _pernoite);
+    string _nome,
+    Evento _evento,
+    Roteiro _roteiro,
+    Deslocamento _deslocamento,
+    Pernoite _pernoite);
     string getNome();
-    // Adicione métodos relevantes para a classe PacoteTurismo, se necessário.
+    
 };
 
 class Pessoa {
@@ -87,7 +83,6 @@ public:
     Pessoa();
     Pessoa(string _nome, int _idade);
 
-    // Adicione métodos relevantes para a classe Pessoa, se necessário.
 };
 
 class Dependente : public Pessoa {
@@ -99,7 +94,6 @@ public:
     void setNome(string _nome);
     int getIdade();
     void setIdade(int _idade);
-    // Adicione métodos relevantes para a classe Dependente, se necessário.
 };
 class Cliente : public Pessoa {
 private:

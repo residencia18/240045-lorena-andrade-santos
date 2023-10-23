@@ -3,7 +3,9 @@
 
 #include "ctrlPacote.h"
 #include "pacoteTurismo.h"
+
 using namespace std;
+
 class ctrl_pacote
 {
     public:
@@ -13,4 +15,5 @@ class ctrl_pacote
         static void venderPacote(Cliente& cliente, PacoteTurismo pacote);
     
 };
+
 #endif
