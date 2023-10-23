@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 using namespace std;
+
 class Evento {
 private:
     string nome;
@@ -13,7 +14,10 @@ public:
     Evento();
     Evento(string _nome, int _vagas);
     string getNome();
-    // Adicione métodos relevantes para a classe Evento, caso necessário.
+    void setNome(string _nome);
+    int getVagas();
+    void setVagas(int _vagas);
+    
 };
 
 class Roteiro {
@@ -25,7 +29,6 @@ public:
     Roteiro();
     Roteiro(string _descricao);
 
-    // Adicione métodos relevantes para a classe Roteiro, caso necessário.
 };
 
 class Deslocamento {
@@ -36,8 +39,6 @@ public:
     ~Deslocamento();
     Deslocamento();
     Deslocamento(string _meioDeTransporte);
-
-    // Adicione métodos relevantes para a classe Deslocamento, caso necessário.
 };
 
 class Pernoite {
@@ -49,7 +50,6 @@ public:
     Pernoite();
     Pernoite(std::string _hotel);
 
-    // Adicione métodos relevantes para a classe Pernoite, caso necessário.
 };
 
 class PacoteTurismo {
@@ -64,13 +64,13 @@ public:
     ~PacoteTurismo();
     PacoteTurismo();
     PacoteTurismo(
-        string _nome,
-        Evento _evento,
-        Roteiro _roteiro,
-        Deslocamento _deslocamento,
-        Pernoite _pernoite);
+    string _nome,
+    Evento _evento,
+    Roteiro _roteiro,
+    Deslocamento _deslocamento,
+    Pernoite _pernoite);
     string getNome();
-    // Adicione métodos relevantes para a classe PacoteTurismo, caso necessário.
+    
 };
 
 class Pessoa {
@@ -83,7 +83,6 @@ public:
     Pessoa();
     Pessoa(string _nome, int _idade);
 
-    // Adicione métodos relevantes para a classe Pessoa, caso necessário.
 };
 
 class Dependente : public Pessoa {
@@ -91,8 +90,10 @@ public:
     ~Dependente();
     Dependente();
     Dependente(string _nome, int _idade);
-
-    // Adicione métodos relevantes para a classe Dependente, caso necessário.
+    string getNome();
+    void setNome(string _nome);
+    int getIdade();
+    void setIdade(int _idade);
 };
 class Cliente : public Pessoa {
 private:
@@ -103,9 +104,12 @@ public:
     Cliente();
     Cliente(string _nome, int _idade);
     string getNome();
+    void setNome(string _nome);
     int getIdade();
+    void setIdade(int _idade);
     void adicionarPacote(PacoteTurismo pacote);
     void adicionarDependente(Dependente dependente);
-    
+    vector<Dependente> getDependentes();
+    void setDependente(vector<Dependente> dependentes);
 };
 #endif

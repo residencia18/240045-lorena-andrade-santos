@@ -18,6 +18,8 @@ alguns dos eventos já definidos antes
 
 using namespace std;
 
+void exibirListaClientes();
+
 int main()
 {
   
@@ -40,7 +42,7 @@ int main()
     while(true)
     {
         monta_menu(menu, "Escolha uma opcao: \n");
-        opcao =  obter_opcao(9);
+        opcao = obter_opcao(9);
         switch (opcao)
         {
             case 1: //1. Cadastrar evento
@@ -74,11 +76,17 @@ int main()
                     ctrl_pacote::venderPacote(clientes[clienteEscolhido], pacotes[pacoteEscolhido]);
                 }
                 break; 
-            // case 5: // Consultar lista de clientes
-            //     for (int i = 0; i < clientes.size(); i++) {
-            //         cout << "Nome: " << clientes[i].getNome() << ", Idade: " << clientes[i].getIdade() << endl;
-            //     }
-            //     break;
+            case 5: // Consultar lista de clientes
+                for (Cliente cliente : clientes) {
+                    cout << "Nome: " << cliente.getNome() << "\t Idade: " << cliente.getIdade() << endl << endl;
+
+                    vector<Dependente> dependentes = cliente.getDependentes();
+                    cout << "lista dependentes:" << endl;
+                    for (Dependente dependente : dependentes) {
+                        cout << "Nome: " << cliente.getNome() << "\t Idade: " << cliente.getIdade() << endl;
+                    }
+                }
+                break;
             // case 6: // Consultar lista de pacotes
             //     for (int i = 0; i < pacotes.size(); i++) {
             //         cout << "Nome do pacote: " << pacotes[i].getNome() << ", Evento: " << pacotes[i].evento.getNome() << endl;
