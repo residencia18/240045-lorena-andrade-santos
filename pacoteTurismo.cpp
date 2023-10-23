@@ -5,6 +5,7 @@
 
 using namespace std;
 
+    //Construtor
     PacoteTurismo ::  ~PacoteTurismo(){
 
     }
@@ -27,6 +28,7 @@ using namespace std;
         return nome;
     }
 
+   //Destrutor
    Evento :: ~Evento(){
 
     }

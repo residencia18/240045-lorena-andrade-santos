@@ -13,7 +13,7 @@ public:
     Evento();
     Evento(string _nome, int _vagas);
     string getNome();
-    // Adicione métodos relevantes para a classe Evento, se necessário.
+    // Adicione métodos relevantes para a classe Evento, caso necessário.
 };
 
 class Roteiro {
@@ -25,7 +25,7 @@ public:
     Roteiro();
     Roteiro(string _descricao);
 
-    // Adicione métodos relevantes para a classe Roteiro, se necessário.
+    // Adicione métodos relevantes para a classe Roteiro, caso necessário.
 };
 
 class Deslocamento {
@@ -37,7 +37,7 @@ public:
     Deslocamento();
     Deslocamento(string _meioDeTransporte);
 
-    // Adicione métodos relevantes para a classe Deslocamento, se necessário.
+    // Adicione métodos relevantes para a classe Deslocamento, caso necessário.
 };
 
 class Pernoite {
@@ -49,7 +49,7 @@ public:
     Pernoite();
     Pernoite(std::string _hotel);
 
-    // Adicione métodos relevantes para a classe Pernoite, se necessário.
+    // Adicione métodos relevantes para a classe Pernoite, caso necessário.
 };
 
 class PacoteTurismo {
@@ -70,7 +70,7 @@ public:
         Deslocamento _deslocamento,
         Pernoite _pernoite);
     string getNome();
-    // Adicione métodos relevantes para a classe PacoteTurismo, se necessário.
+    // Adicione métodos relevantes para a classe PacoteTurismo, caso necessário.
 };
 
 class Pessoa {
@@ -83,7 +83,7 @@ public:
     Pessoa();
     Pessoa(string _nome, int _idade);
 
-    // Adicione métodos relevantes para a classe Pessoa, se necessário.
+    // Adicione métodos relevantes para a classe Pessoa, caso necessário.
 };
 
 class Dependente : public Pessoa {
@@ -92,7 +92,7 @@ public:
     Dependente();
     Dependente(string _nome, int _idade);
 
-    // Adicione métodos relevantes para a classe Dependente, se necessário.
+    // Adicione métodos relevantes para a classe Dependente, caso necessário.
 };
 class Cliente : public Pessoa {
 private:
