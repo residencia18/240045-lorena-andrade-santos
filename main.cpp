@@ -74,53 +74,53 @@ int main()
                     ctrl_pacote::venderPacote(clientes[clienteEscolhido], pacotes[pacoteEscolhido]);
                 }
                 break; 
-            case 5: // Consultar lista de clientes
-                for (int i = 0; i < clientes.size(); i++) {
-                    cout << "Nome: " << clientes[i].getNome() << ", Idade: " << clientes[i].getIdade() << endl;
-                }
-                break;
-            case 6: // Consultar lista de pacotes
-                for (int i = 0; i < pacotes.size(); i++) {
-                    cout << "Nome do pacote: " << pacotes[i].getNome() << ", Evento: " << pacotes[i].evento.getNome() << endl;
-                }
-                break;
-            case 7: // Consultar pacotes contratados por cliente
-                if (clientes.empty()) {
-                    cout << "Não existem clientes cadastrados.\n";
-                } else {
-                    int clienteEscolhido;
-                    cout << "Escolha um cliente:\n";
-                    for (int i = 0; i < clientes.size(); i++) {
-                        cout << i << ". " << clientes[i].getNome() << endl;
-                    }
-                    cin >> clienteEscolhido;
-                    cout << "Pacotes contratados por " << clientes[clienteEscolhido].getNome() << ":\n";
-                    for (int i = 0; i < clientes[clienteEscolhido].pacotes.size(); i++) {
-                        cout << "Nome do pacote: " << clientes[clienteEscolhido].pacotes[i].getNome() << ", Evento: " << clientes[clienteEscolhido].pacotes[i].evento.getNome() << endl;
-                    }
-                }
-                break;
-            case 8: // Consultar clientes que contrataram um pacote
-                if (eventos.empty()) {
-                    cout << "Não existem pacotes cadastrados.\n";
-                } else {
-                    int pacoteEscolhido;
-                    cout << "Escolha um pacote:\n";
-                    for (int i = 0; i < pacotes.size(); i++) {
-                        cout << i << ". " << pacotes[i].getNome() << endl;
-                    }
-                    cin >> pacoteEscolhido;
-                    cout << "Clientes que contrataram o pacote " << pacotes[pacoteEscolhido].getNome() << ":\n";
-                    for (int i = 0; i < clientes.size(); i++) {
-                        for (int j = 0; j < clientes[i].pacotes.size(); j++) {
-                            if (clientes[i].pacotes[j].getNome() == pacotes[pacoteEscolhido].getNome()) {
-                                cout << "Nome: " << clientes[i].getNome() << ", Idade: " << clientes[i].getIdade() << endl;
-                                break; // Só exibe o cliente uma vez
-                            }
-                        }
-                    }
-                }
-                break;
+            // case 5: // Consultar lista de clientes
+            //     for (int i = 0; i < clientes.size(); i++) {
+            //         cout << "Nome: " << clientes[i].getNome() << ", Idade: " << clientes[i].getIdade() << endl;
+            //     }
+            //     break;
+            // case 6: // Consultar lista de pacotes
+            //     for (int i = 0; i < pacotes.size(); i++) {
+            //         cout << "Nome do pacote: " << pacotes[i].getNome() << ", Evento: " << pacotes[i].evento.getNome() << endl;
+            //     }
+            //     break;
+            // case 7: // Consultar pacotes contratados por cliente
+            //     if (clientes.empty()) {
+            //         cout << "Não existem clientes cadastrados.\n";
+            //     } else {
+            //         int clienteEscolhido;
+            //         cout << "Escolha um cliente:\n";
+            //         for (int i = 0; i < clientes.size(); i++) {
+            //             cout << i << ". " << clientes[i].getNome() << endl;
+            //         }
+            //         cin >> clienteEscolhido;
+            //         cout << "Pacotes contratados por " << clientes[clienteEscolhido].getNome() << ":\n";
+            //         for (int i = 0; i < clientes[clienteEscolhido].pacotes.size(); i++) {
+            //             cout << "Nome do pacote: " << clientes[clienteEscolhido].pacotes[i].getNome() << ", Evento: " << clientes[clienteEscolhido].pacotes[i].evento.getNome() << endl;
+            //         }
+            //     }
+            //     break;
+            // case 8: // Consultar clientes que contrataram um pacote
+            //     if (eventos.empty()) {
+            //         cout << "Não existem pacotes cadastrados.\n";
+            //     } else {
+            //         int pacoteEscolhido;
+            //         cout << "Escolha um pacote:\n";
+            //         for (int i = 0; i < pacotes.size(); i++) {
+            //             cout << i << ". " << pacotes[i].getNome() << endl;
+            //         }
+            //         cin >> pacoteEscolhido;
+            //         cout << "Clientes que contrataram o pacote " << pacotes[pacoteEscolhido].getNome() << ":\n";
+            //         for (int i = 0; i < clientes.size(); i++) {
+            //             for (int j = 0; j < clientes[i].pacotes.size(); j++) {
+            //                 if (clientes[i].pacotes[j].getNome() == pacotes[pacoteEscolhido].getNome()) {
+            //                     cout << "Nome: " << clientes[i].getNome() << ", Idade: " << clientes[i].getIdade() << endl;
+            //                     break; // Só exibe o cliente uma vez
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     break;
              case 9: exit(0);
         }
     }
