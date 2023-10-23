@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 using namespace std;
+
 class Evento {
 private:
     string nome;
@@ -13,6 +14,9 @@ public:
     Evento();
     Evento(string _nome, int _vagas);
     string getNome();
+    void setNome(string _nome);
+    int getVagas();
+    void setVagas(int _vagas);
     // Adicione métodos relevantes para a classe Evento, se necessário.
 };
 
@@ -91,7 +95,10 @@ public:
     ~Dependente();
     Dependente();
     Dependente(string _nome, int _idade);
-
+    string getNome();
+    void setNome(string _nome);
+    int getIdade();
+    void setIdade(int _idade);
     // Adicione métodos relevantes para a classe Dependente, se necessário.
 };
 class Cliente : public Pessoa {
@@ -103,9 +110,12 @@ public:
     Cliente();
     Cliente(string _nome, int _idade);
     string getNome();
+    void setNome(string _nome);
     int getIdade();
+    void setIdade(int _idade);
     void adicionarPacote(PacoteTurismo pacote);
     void adicionarDependente(Dependente dependente);
-    
+    vector<Dependente> getDependentes();
+    void setDependente(vector<Dependente> dependentes);
 };
 #endif

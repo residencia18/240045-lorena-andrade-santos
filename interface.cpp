@@ -9,6 +9,7 @@ void aguarde(void)
 {
     cout << "Tecle algo para continuar...";
     cin.get();
+    //getch();
     cout << endl;
 }
 
