@@ -1,8 +1,86 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "pacoteTurismo.h"
 
 using namespace std;
+
+//Representa um evento específico que faz parte do pacote de turismo. 
+class Evento {
+private:
+    string nome;
+    int vagas;
+public:
+    ~Evento(){
+
+    //Construtor
+    PacoteTurismo ::  ~PacoteTurismo(){
+
+    }
+    PacoteTurismo :: PacoteTurismo(){
+        nome = "";
+    }
+    PacoteTurismo :: PacoteTurismo(
+        string _nome, 
+        Evento _evento, 
+        Roteiro _roteiro, 
+        Deslocamento _deslocamento, 
+        Pernoite _pernoite){
+        nome = _nome;
+        evento = _evento;
+        roteiro = _roteiro;
+        deslocamento = _deslocamento;
+        pernoite = _pernoite;
+    }        
+    string PacoteTurismo :: getNome(){
+        return nome;
+    }
+
+   //Destrutor
+   Evento :: ~Evento(){
+
+    }
+    Evento :: Evento(){
+        nome = "";
+        vagas = 0;
+    }
+    Evento :: Evento(string _nome, int _vagas) {
+       nome = _nome;
+       vagas = _vagas; 
+    }
+    string Evento :: getNome(){
+        return nome;
+    }
+
+    Roteiro :: ~Roteiro(){
+
+    }
+    Roteiro :: Roteiro(){
+        descricao = "";
+    }
+    Roteiro :: Roteiro(string _descricao){
+        descricao = _descricao;
+    } 
+
+    Deslocamento ::  ~Deslocamento(){
+
+    }
+    Deslocamento :: Deslocamento(){
+        meioDeTransporte = "";
+    }
+    Deslocamento :: Deslocamento(string _meioDeTransporte) {
+        meioDeTransporte = _meioDeTransporte;
+    }
+    Pernoite :: ~Pernoite(){
+
+    }
+   Pernoite ::  Pernoite(){
+        hotel = "";
+    }
+   Pernoite ::  Pernoite(string _hotel){
+        hotel = _hotel;
+    } 
+};
 
 //Foi criada na classe base chamada Pessoa
 //e Cliente e Dependente herdarão de Pessoa
@@ -27,47 +105,91 @@ public:
     }
 };
 
+class Dependente : public Pessoa {
+private:
+    Cliente* responsavel;
+    string nome;
+    int idade;
+
+public:
+    ~Dependente(){
+
+    }
+
+    Dependente(){
+        nome = "";
+        idade = 0;
+    }
+
+    Dependente(string _nome, int _idade, Cliente* _responsavel){
+        nome = _nome;
+        idade = _idade;
+        responsavel = _responsavel;
+    }
+
+    string getNome() {
+        return nome;
+    }
+
+    void setNome(string _nome) {
+        nome = _nome;
+    }
+
+    int getIdade() {
+        return idade;
+    }
+
+    void setIdade(int _idade) {
+        idade = _idade;
+    }
+};
+
 class Cliente : public Pessoa {
 private:
     //relacionamento entre Cliente e PacoteTurismo, podemos usar agregação.
     //pois um pacote de turismo pode estar vinculado a um ou mais clientes, mas não é completamente dependente deles.
     vector<PacoteTurismo> pacotes;
+    vector<Dependente> dependentes;
 public:
     ~Cliente(){
 
     }
+
     Cliente(){
         nome = "";
         idade = 0;
     }
+
     Cliente(string _nome, int _idade) {
         nome = _nome;
+        idade = _idade;
+    }
+
+    string getNome() {
+        return nome;
+    }
+
+    void setNome(string _nome) {
+        nome = _nome;
+    }
+
+    int getIdade() {
+        return idade;
+    }
+
+    void setIdade(int _idade) {
         idade = _idade;
     }
 
     void adicionarPacote(PacoteTurismo pacote) {
         pacotes.push_back(pacote);
     }
-};
 
-class Dependente : public Pessoa {
-private:
-    Cliente* responsavel;
-public:
-    ~Dependente(){
-
-    }
-    Dependente(){
-        nome = "";
-        idade = 0;
-    }
-    Dependente(string _nome, int _idade, Cliente* _responsavel){
-        nome = _nome;
-        idade = _idade;
-        responsavel = _responsavel;
-
+    void adicionarDependente(Dependente dependente) {
+        dependentes.push_back(dependente);
     }
 };
+
 //Podemos utilizar composição para criar a classe PacoteTurismo contém outros objetos para representar roteiros, deslocamentos e pernoites.
 class PacoteTurismo {
 private:
@@ -90,69 +212,6 @@ public:
         deslocamento = _deslocamento;
         pernoite = _pernoite;
     }        
-};
-//Representa um evento específico que faz parte do pacote de turismo. 
-class Evento {
-private:
-    string nome;
-    int vagas;
-public:
-    ~Evento(){
-
-    }
-    Evento(){
-        nome = "";
-        vagas = 0;
-    }
-    Evento(string _nome, int _vagas) {
-       nome = _nome;
-       vagas = _vagas; 
-    }
-};
-
-class Roteiro {
-private:
-    string descricao;
-public:
-    ~Roteiro(){
-
-    }
-    Roteiro(){
-        descricao = "";
-    }
-    Roteiro(string _descricao){
-        descricao = _descricao;
-    } 
-};
-
-class Deslocamento {
-private:
-    string meioDeTransporte;
-public:
-    ~Deslocamento(){
-
-    }
-    Deslocamento(){
-        meioDeTransporte = "";
-    }
-    Deslocamento(string _meioDeTransporte) {
-        meioDeTransporte = _meioDeTransporte
-    }
-};
-
-class Pernoite {
-private:
-    string hotel;
-public:
-    ~Pernoite(){
-
-    }
-    Pernoite(){
-        hotel = "";
-    }
-    Pernoite(string _hotel){
-        hotel = _hotel;
-    } 
 };
 
 int main() {
