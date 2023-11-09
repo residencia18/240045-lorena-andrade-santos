@@ -5,8 +5,7 @@ Console.WriteLine();
 
 #region 2. Tipos de Dados
     //Números inteiros:
-        
-    //O Int no geral é utilizado para números considerados razoavéis
+   //O Int no geral é utilizado para números considerados razoavéis
     int idade = 30; //Exemplo para representar a idade de uma pessoa
 
     //O long é utilizado para armazenar números inteiros muito grandes
