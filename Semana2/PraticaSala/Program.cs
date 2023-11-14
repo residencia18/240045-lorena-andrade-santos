@@ -47,3 +47,19 @@ Console.WriteLine();
         Console.WriteLine();
     }
 #endregion
+
+
+ #region stringData
+    string dataString = "25/10/2023";
+    string[] partesData = dataString.split('/');
+
+    string dia, mes, ano;
+
+    dia = partesData[0];
+    mes = partesData[1];
+    ano = partesData[2];
+
+    Console.WriteLine("Dia: " + dia);
+    Console.WriteLine("Mês: " + mes);
+    Console.WriteLine("Ano: " + ano);
+ #endregion
