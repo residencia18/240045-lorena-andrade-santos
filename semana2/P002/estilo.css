@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+#geral {
+    display: grid;
+    grid-template-areas:
+        "topo topo topo"
+        "menulateraldireito menulateralcentral menulateralesquerdo"
+        "menuinferior menuinferior menuinferior"
+        "rodape rodape rodape";
+    grid-template-rows: 100px minmax(200px, auto) 150px 30px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;
+    min-height: 150vh;
+}
+
+#topo {
+    grid-area: topo;
+    background-image: url("./assets/uesc.jpg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(4, 245, 76);
+    background-color: #0766AD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#menuinferior {
+    grid-area: menuinferior;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    color: rgb(11, 26, 1);
+    padding: 5px;
+    margin: 0;
+    gap: 5px;
+}
+
+#menulateraldireito {
+    grid-area: menulateraldireito;
+    background-color: #94A684;
+    padding: 5px;
+}
+
+#menulateralcentral {
+    grid-area: menulateralcentral;
+    text-align: justify;
+    background-color: #AEC3AE;
+    padding: 5px;
+}
+
+#menulateralesquerdo {
+    grid-area: menulateralesquerdo;
+    background-color: #E4E4D0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ime1, #ime2{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #94A684;
+    padding: 10px;
+    margin: 5px;
+}
+#servicos{
+    background-color: #C4D7B2;
+    padding: 5px;
+}
+#resultados{
+    background-color: #E1ECC8;
+    padding: 5px;
+}
+#rodape{
+    grid-area: rodape;
+    background-color: #F7FFE5;
+    font-size: 10px;
+    text-align: center;
+
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
