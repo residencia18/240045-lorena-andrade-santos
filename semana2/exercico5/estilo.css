@@ -1,0 +1,11 @@
+.caixa{
+    color: yellow;
+}
+.texto-branco{
+    color: white;
+}
+#caixa-externa{
+    background-color: blue;
+.caixa-interna{
+    background-color: red;
+}

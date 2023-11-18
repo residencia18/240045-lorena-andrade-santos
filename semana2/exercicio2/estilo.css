@@ -1,0 +1,19 @@
+#amarelo {
+    color:rgb(225, 247, 82);
+}
+#vermelho{
+    color: red;
+}
+#azul{
+    color: blue;
+}
+#marron{
+    color: rgba(165, 42, 42, 0.512);
+}
+#violeta{
+    color: rgb(145, 11, 145);
+}
+img{
+    width: 150px;
+    height: 150px;
+}
