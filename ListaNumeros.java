@@ -44,15 +44,35 @@ public class ListaNumeros {
 			return numeros.get(meio);
 		}
 	}
+	public float colocadoEm(int index) 
+	{
+		int quantos = numeros.size();
+		if(index < quantos) 
+		{
+			if (index +1 < quantos) {
+				return numeros.get(index +1);	
+			}
+			else
+			{
+				System.out.println("Seu maior número já esta no indice: " + index);
+				return -1;
+			}
+			
+		}
+		else {
+			System.out.println("Ops... O index digitado é maior que a quentidade de itens da minha lista.");
+			return -1;
+		}
+	}
 	public static void main(String[] args) {
 		ListaNumeros meusNumeros = new ListaNumeros();
 
 		float numero;
+		Scanner entrada = new Scanner(System.in);
+		
 		do {
 			System.out.println("Digite um float para compor uma Lista de numeros: Para sair digite -1 ");
 
-			Scanner entrada = new Scanner(System.in);
-			
 			numero = entrada.nextFloat();
 			if(numero != -1) {
 				meusNumeros.novoNumero(numero);
@@ -62,8 +82,20 @@ public class ListaNumeros {
 		System.out.println();
 		System.out.println("A média desses numeros é: " + meusNumeros.media());
 		System.out.println();
+		
 		meusNumeros.ordenar();
 		meusNumeros.listaNumeros();
+		
 		System.out.println("A mediana é: " + meusNumeros.mediana());
+		
+		int index;
+		System.out.println("Digite um indice para eu retorna que é o maior dele: ");		
+		index = entrada.nextInt();
+		float enesimoMaior = meusNumeros.colocadoEm(index);
+		if (enesimoMaior != -1)
+		{
+			System.out.println("O o N ésimoMAIOR número dessa lista é: " + enesimoMaior); ;
+		}
+		
 	}
 }
