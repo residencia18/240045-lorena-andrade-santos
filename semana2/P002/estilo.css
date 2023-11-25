@@ -1,19 +1,18 @@
 body {
-    margin: 0;
+    margin: 2px;
     font-family: 'Jost', sans-serif;
 }
 
 #geral {
     display: grid;
+    grid-gap: 5px;
     grid-template-areas:
         "topo topo topo"
         "menulateraldireito menulateralcentral menulateralesquerdo"
         "menuinferior menuinferior menuinferior"
         "rodape rodape rodape";
-    grid-template-rows: 100px minmax(200px, auto) 150px 30px;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 5px;
-    min-height: 150vh;
+    grid-template-rows: 100px minmax(200px, auto) minmax(100px, auto) 20px;
+    grid-template-columns: 1fr 2fr 20%;
 }
 
 #topo {
@@ -21,43 +20,33 @@ body {
     background-image: url("./assets/uesc.jpg");
     background-size: cover;
     background-position: center;
-    color: rgb(4, 245, 76);
+    color: rgb(201, 224, 208);
     background-color: #0766AD;
-    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 25px;
 }
 
-#menuinferior {
-    grid-area: menuinferior;
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    color: rgb(11, 26, 1);
-    padding: 5px;
-    margin: 0;
-    gap: 5px;
-}
 
 #menulateraldireito {
+    margin-top: 5px;
     grid-area: menulateraldireito;
     background-color: #94A684;
-    padding: 5px;
+    row-gap: 5px;
 }
 
 #menulateralcentral {
+    margin-top: 5px;
     grid-area: menulateralcentral;
     text-align: justify;
     background-color: #AEC3AE;
-    padding: 5px;
 }
 
 #menulateralesquerdo {
+    margin-top: 5px;
     grid-area: menulateralesquerdo;
     background-color: #E4E4D0;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 #ime1, #ime2{
@@ -65,8 +54,16 @@ body {
     width: 100px;
     height: 100px;
     border: 1px solid #94A684;
-    padding: 10px;
     margin: 5px;
+}
+
+#menuinferior {
+    display: grid;
+    grid-gap: 5px;
+    grid-area: menuinferior;
+    grid-template-columns: 1fr 400px; 
+    color: rgb(11, 26, 1);
+   
 }
 #servicos{
     background-color: #C4D7B2;
@@ -85,7 +82,6 @@ body {
 }
 ul {
     list-style: none;
-    padding: 0;
 }
 
 ul li {
