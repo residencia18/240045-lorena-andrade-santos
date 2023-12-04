@@ -1,0 +1,94 @@
+.container-destinos {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  color: #b04eee;
+}
+
+ul {
+  font-family: 'Roboto', sans-serif;
+  list-style-type: "\2713";
+  grid-column: 2;
+}
+
+li {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 25px;
+}
+
+img{
+  width: 60%;
+  height: 25%;
+  border-radius: 10px;
+  margin: 10px;
+}
+.roteiros-viagens{
+  font-family: 'Jost', sans-serif;
+  border-radius: 10px;
+  background-color: rgb(211, 176, 237);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  width: calc(26% - 20px);  
+  border-radius: 10px;
+  max-width: 350px; 
+  margin: 0 auto; 
+}
+.roteiro-comprar {
+  background-color: #83f377;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #fef9f6;
+}
+.roteiro-comprar {
+  background-color: #83f377;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #fef9f6;
+  cursor: pointer; /* Adiciona um ponteiro ao cursor quando passa sobre o botão */
+  transition-duration: 0.3s; /* Define a duração da transição */
+
+  /* Adiciona sombra ao botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Adiciona transformação ao botão (escala ao clicar) */
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.roteiro-comprar:hover {
+  background-color: #5cb85c; /* Cor alterada ao passar o mouse sobre o botão */
+  color: #ffffff; /* Cor do texto alterada ao passar o mouse sobre o botão */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+}
+
+.roteiro-comprar:active {
+  transform: scale(0.95); /* Reduz a escala ao clicar no botão */
+}
+
+@media (min-width: 480px) {
+  .roteiros-viagens {
+    width: 100%; /* Um destino por linha em telas menores */
+  }
+}
+
+@media (min-width: 768px) {
+  .roteiros-viagens {
+    width: calc(33.33% - 20px); /* 33.33% para 3 destinos lado a lado, subtraindo o gap */
+  }
+}
