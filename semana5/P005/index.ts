@@ -54,8 +54,6 @@ async function fetchData(apiUrl: string): Promise<any> {
 
         servicosQuadro.innerHTML = servicosHTML;
       }
-
-      // Continue a adicionar chamadas de API e preencher outros quadros conforme necessário
   
     } catch (error) {
       console.error(error);
