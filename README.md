@@ -6,8 +6,9 @@ Este repositório contém os códigos fontes em C++ dos exercícios propostos no
   - Carlos Andre
   - Daniel Oliveira
   - Leandro Grarcia
-  - Lorena Andrade
   - Nathalie Lima
+
+  - Lorena Andrade
    ![Lorena Andrade](https://avatars.githubusercontent.com/u/65913534?s=400&u=3594789ab6031f0e6e6089ffd9c8adc410b511fc&v=4)
 
 
