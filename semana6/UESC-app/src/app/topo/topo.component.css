@@ -1,0 +1,15 @@
+#topo {
+    background-color: #EFFBF8;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    width: auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para manter a proporção da imagem e cobrir a área da div */
+    top: 0;
+    left: 0;
+}

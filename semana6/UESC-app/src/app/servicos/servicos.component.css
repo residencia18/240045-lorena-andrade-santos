@@ -1,0 +1,21 @@
+
+#menuinferior {
+    display: grid;
+    grid-area: menuinferior;
+    grid-template-columns: 1fr 400px; 
+    color: rgb(11, 26, 1);
+    grid-gap: 5px;
+    margin-top: 5px;
+    row-gap: 5px;
+   
+}
+#servicos{
+    grid-gap: 5px;
+    background-color: #C4D7B2;
+    padding: 5px;
+}
+#resultados{
+    grid-gap: 5px;
+    background-color: #E1ECC8;
+    padding: 5px;
+}
