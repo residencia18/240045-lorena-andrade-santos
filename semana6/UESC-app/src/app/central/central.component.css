@@ -1,0 +1,34 @@
+/* menu-central.component.css */
+
+#menu-central {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Atualizado para 1fr 2fr 1fr */
+    grid-gap: 10px;
+  }
+  
+  #menulateraldireito {
+    background-color: #94A684;
+    padding: 10px;
+  }
+  
+  #menulateralcentral {
+    background-color: #AEC3AE;
+    text-align: justify;
+    padding: 10px;
+  }
+  
+  #menulateralesquerdo {
+    background-color: #E4E4D0;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  #ime1,
+  #ime2 {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #94A684;
+    margin: 10px;
+  }
+  

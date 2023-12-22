@@ -1,0 +1,30 @@
+/* app.component.css */
+
+#geral {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "topo topo topo"
+    "menulateraldireito menulateralcentral menulateralesquerdo"
+    "rodape rodape rodape";
+  grid-template-rows: 100px minmax(200px, auto) minmax(100px, auto) 20px;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+
+#menu-central {
+  grid-area: menu-central;
+}
+
+#central {
+  grid-area: central;
+
+}
+
+#servicos {
+  grid-area: servicos;
+
+}
+
+

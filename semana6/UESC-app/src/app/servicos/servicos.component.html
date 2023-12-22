@@ -1,0 +1,10 @@
+<div id="menuinferior">
+    <div id="servicos">
+        <p>Cidade: {{ weatherData?.name }}</p>
+        <p>Temperatura Atual: {{ weatherData?.main.temp }}°C</p>
+        <p>Temperatura Mínima: {{ weatherData?.main.temp_min }}°C</p>
+        <p>Temperatura Máxima: {{ weatherData?.main.temp_max }}°C</p>
+        <p>Descrição: {{ weatherData?.weather[0]?.description }}</p>
+    </div>
+    <div id="resultados"><p>Resultados</p></div>
+</div>
