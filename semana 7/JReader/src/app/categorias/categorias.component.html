@@ -1,0 +1,9 @@
+<!-- categorias.component.html -->
+<div *ngIf="categorias">
+  <h2>Categorias</h2>
+  <ul>
+    <li *ngFor="let categoria of categorias | keyvalue" (click)="onSelect(categoria.key)">
+      {{categoria.key}}
+    </li>
+  </ul>
+</div>

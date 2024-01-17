@@ -1,0 +1,9 @@
+<!-- veiculos.component.html -->
+<div *ngIf="veiculos">
+  <h2>Veículos</h2>
+  <ul>
+    <li *ngFor="let veiculo of veiculos" (click)="onSelect(veiculo)">
+      {{veiculo.Name}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+<!-- app.component.html -->
+<input type="file" (change)="onFileSelected($event)"/>
+<div class="container">
+  <app-categorias [categorias]="dados" (categoriaSelecionada)="onCategoriaSelecionada($event)"></app-categorias>
+  <app-veiculos [categoria]="dados" [veiculos]="veiculos" (veiculoSelecionado)="onVeiculoSelecionado($event)"></app-veiculos>
+  <app-propriedades [propriedades]="propriedades"></app-propriedades>
+</div>

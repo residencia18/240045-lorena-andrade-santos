@@ -1,0 +1,10 @@
+<!-- nomes.component.html -->
+<div *ngIf="nomes">
+    <h2>Nomes dos Veículos</h2>
+    <ul>
+      <li *ngFor="let nome of nomes" (click)="onSelect(nome)">
+        {{nome}}
+      </li>
+    </ul>
+  </div>
+  
