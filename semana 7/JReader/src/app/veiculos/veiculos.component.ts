@@ -15,11 +15,6 @@ export class VeiculosComponent  implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // onSelect(veiculo: any) {
-  //   this.veiculoSelecionado.emit(veiculo);
-  // }
-  
   onSelect(veiculo: any) {
     this.veiculoSelecionado.emit(veiculo);
   }
