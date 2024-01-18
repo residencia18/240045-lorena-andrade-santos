@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/tic18_M2_Front/",
+            "baseHref": "/tic18_M2_Front/semana%207/JReader/src/",
             "outputPath": "dist/jreader",
             "index": "src/index.html",
             "browser": "src/main.ts",
