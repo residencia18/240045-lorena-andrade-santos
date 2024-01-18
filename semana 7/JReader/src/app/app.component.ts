@@ -14,6 +14,10 @@ export class AppComponent {
   veiculos: any[] = [];
   nomes: string[] | undefined;
   propriedades: any;
+  valoresSelecionados: any[] = [];
+  valorSelecionado: any;
+
+
   onFileSelected(event: any) {
     this.file = (event.target as HTMLInputElement)?.files?.[0];
     const reader = new FileReader();
@@ -39,25 +43,26 @@ export class AppComponent {
     }
   }
  
-  // onCategoriaSelecionada(event: { categoria: string, veiculos: any[] }) {
-  //   this.veiculos = this.dados[event.categoria];
-  //   this.nomes = this.veiculos.map((veiculo: any) => veiculo.Name);
-  //   this.propriedades = null;
-  // }
-  onCategoriaSelecionada(event: { categoria: string, veiculos: any[] }) {
+  oncategoriaSelecionada(event: { categoria: string, veiculos: any[] }) {
     this.veiculos = this.dados[event.categoria];
     this.nomes = this.veiculos.map((veiculo: any) => veiculo.Name);
     this.propriedades = null;
+
   }
   
-  
-  onVeiculoSelecionado(veiculo: any) {
+   onVeiculoSelecionado(veiculo: any) {
     this.nomes = this.veiculos.map((veiculo: any) => veiculo.Name);
     this.propriedades = veiculo;
     this.nomes = this.veiculos.map((veiculo: any) => veiculo.Name);
-    // this.categoria = veiculo;
   }
-  onNomeSelecionado(nome: string) {
-    this.propriedades = this.veiculos.find((veiculo: any) => veiculo.Name === nome);
+   onPropriedadeSelecionada(propriedade: any) {
+    const valorSelecionado = this.propriedades[propriedade];
+    this.valoresSelecionados = Array.isArray(valorSelecionado) ? valorSelecionado : [valorSelecionado];
   }
+  
+
+  onValorClicado(valor: any) {
+    this.valorSelecionado = valor;
+  }
+  
 }

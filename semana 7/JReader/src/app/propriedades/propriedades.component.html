@@ -1,9 +1,9 @@
  <!-- propriedades.component.html -->
-<div *ngIf="propriedades">
+<div *ngIf="propriedades" class="container">
   <h2>Propriedades do Veículo</h2>
   <ul>
-    <li *ngFor="let propriedade of propriedades | keyvalue">
-      {{propriedade.key}}: {{propriedade.value}}
+    <li *ngFor="let propriedade of propriedades | keyvalue" (click)="onPropriedadeClicada(propriedade.value)">
+      {{propriedade.key}}
     </li>
   </ul>
 </div>

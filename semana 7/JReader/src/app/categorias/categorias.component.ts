@@ -13,14 +13,8 @@ export class CategoriasComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // onSelect(categoria: any) {
-  //   const veiculosDaCategoria = this.veiculos.filter(veiculo => veiculo.key === categoria.key);
-  //   this.categoriaSelecionada.emit({ categoria: categoria.key, veiculos: veiculosDaCategoria });
-  // }
-
   onSelect(categoria: any) {
-    const veiculosDaCategoria = this.categorias[categoria];
-    this.categoriaSelecionada.emit({ categoria: categoria, veiculos: veiculosDaCategoria });
+    const veiculosDacategoria = this.categorias[categoria];
+    this.categoriaSelecionada.emit({ categoria: categoria, veiculos: veiculosDacategoria });
   }
-  
 }

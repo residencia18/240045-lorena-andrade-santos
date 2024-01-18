@@ -1,5 +1,5 @@
 <!-- veiculos.component.html -->
-<div *ngIf="veiculos">
+<div *ngIf="veiculos && veiculos.length > 0" class="container">
   <h2>Veículos</h2>
   <ul>
     <li *ngFor="let veiculo of veiculos" (click)="onSelect(veiculo)">

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+// valor.component.ts
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-valor',
   templateUrl: './valor.component.html',
-  styleUrl: './valor.component.css'
+  styleUrls: ['./valor.component.css']
 })
 export class ValorComponent {
-
+  @Input() valor: any;
 }

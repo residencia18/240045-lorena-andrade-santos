@@ -1,5 +1,5 @@
 // propriedades.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-propriedades',
@@ -8,4 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 export class PropriedadesComponent {
   @Input() propriedades: any;
+  @Output() valorClicado = new EventEmitter<any>();
+  valorSelecionado: any;
+
+  onSelect(valor: any) {
+    this.valorSelecionado = valor;
+  }
+  // propriedades.component.ts
+onPropriedadeClicada(valor: any) {
+  console.log('Valor clicado:', valor);
+  this.valorClicado.emit(valor);
+}
+
 }
