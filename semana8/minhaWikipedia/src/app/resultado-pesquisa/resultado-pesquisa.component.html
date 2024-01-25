@@ -1,0 +1,6 @@
+<!-- resultado-pesquisa.component.html -->
+<div *ngFor="let result of results">
+    <h3>{{ result.title }}</h3>
+    <p [innerHTML]="result.snippet | bold:term"></p>
+    <a [href]="'https://en.wikipedia.org?curid=' + result.pageid">Leia mais</a>
+  </div>
