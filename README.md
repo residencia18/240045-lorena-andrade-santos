@@ -1,7 +1,7 @@
-### Pratica P003
-Repositório referente às práticas em grupo da residência na trilha de .NET.
+### Repositorio de Estudos da Residencia de Software TIC18
+Repositório de Estudos do Modulo Basico da Trilha de Dotnet
 
-### Projeto de Clean Arquiteture
+### Projeto de Clean Arquiteture Macoratti
 
 Esta tarefa é baseada no projeto básico de Clean Arquitecture proposto pelo Prof. José Carlos Macoratti. Foi seguido o passo-a-passo detalhado na playlist com 5 vídeos disponível [aqui](https://www.youtube.com/playlist?list=PLUg4628weKYzPQ9Odqe7jqSTNJbin0j9W).
 
