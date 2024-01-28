@@ -1,9 +1,9 @@
 ### Repositorio de Estudos da Residencia de Software TIC18
 Repositório de Estudos do Modulo Basico da Trilha de Dotnet
 
-### Projeto de Clean Arquiteture Macoratti
+### Projeto de Clean Arquiteture Macoratti - Branch cleanArchitecture
 
-Esta tarefa é baseada no projeto básico de Clean Arquitecture proposto pelo Prof. José Carlos Macoratti. Foi seguido o passo-a-passo detalhado na playlist com 5 vídeos disponível [aqui](https://www.youtube.com/playlist?list=PLUg4628weKYzPQ9Odqe7jqSTNJbin0j9W).
+Baseada no projeto básico de Clean Arquitecture proposto pelo Prof. José Carlos Macoratti. Foi seguido o passo-a-passo detalhado na playlist com 5 vídeos disponível [aqui](https://www.youtube.com/playlist?list=PLUg4628weKYzPQ9Odqe7jqSTNJbin0j9W).
 
 ### Tarefas
 - DOTNET-P003/02.seu_nome: Seguir as orientações no primeiro vídeo: .NET – Usando a Clean Architecture I; 
