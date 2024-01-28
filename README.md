@@ -1,6 +1,11 @@
 ### Repositorio de Estudos da Residencia de Software TIC18
 Repositório de Estudos do Modulo Basico da Trilha de Dotnet
 
+###Projeto TechFit em Clean Architecture - Branch TechFit-CleanArchitecture
+O projeto TechFit foi inicialmente proposto na avaliação do módulo introdutório da Trilha Dotnet.
+Ele foi reestruturado seguindo os princípios da Clean Architecture.
+
+
 ### Projeto de Clean Arquiteture Macoratti - Branch cleanArchitecture
 
 Baseada no projeto básico de Clean Arquitecture proposto pelo Prof. José Carlos Macoratti. Foi seguido o passo-a-passo detalhado na playlist com 5 vídeos disponível [aqui](https://www.youtube.com/playlist?list=PLUg4628weKYzPQ9Odqe7jqSTNJbin0j9W).
