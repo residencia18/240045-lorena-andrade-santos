@@ -12,10 +12,11 @@ namespace TechAdvocacia.Application.Services
     public class ClienteService : IClienteService
     {
         private readonly TechAdvocaciaDbContext _context;
+        
         public ClienteService(TechAdvocaciaDbContext context){
             _context = context;
         }
-        
+
         public int Create(NewClienteInputModel medico)
         {
             throw new NotImplementedException();

@@ -1,0 +1,17 @@
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Application.deps.json
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Application.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Application.pdb
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Core.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Core.pdb
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.csproj.AssemblyReference.cache
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.AssemblyInfoInputs.cache
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.AssemblyInfo.cs
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.csproj.CoreCompileInputs.cache
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.csproj.CopyComplete
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/refint/TechAdvocacia.Application.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/TechAdvocacia.Application.pdb
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/Debug/net7.0/ref/TechAdvocacia.Application.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Infra.dll
+/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/bin/Debug/net7.0/TechAdvocacia.Infra.pdb
