@@ -8,11 +8,11 @@ export class RedirectServiceService {
   constructor(private router: Router) { }
 
   redirectToUESC(): void {
-    window.location.href = 'https://lorenaandradeba.github.io/tic18_M2_Front/semana6/UESC-app/dist/uesc-app/browser/UESC-app/';
+    window.location.href = 'https://lorenaandradeba.github.io/tic18_M2_Front/semana6/UESC-app/dist/uesc-app/browser/UESC-app/index.html';
   }
 
   redirectToJReader(): void {
-    window.location.href = 'https://lorenaandradeba.github.io/tic18_M2_Front/semana%207/JReader/dist/jreader/browser/JReader/';
+    window.location.href = 'https://lorenaandradeba.github.io/tic18_M2_Front/semana%207/JReader/dist/jreader/browser/JReader/index.html';
   }
 
   redirectToWikipedia(): void {
