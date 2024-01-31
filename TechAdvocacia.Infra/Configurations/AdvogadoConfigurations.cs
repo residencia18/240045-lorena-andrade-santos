@@ -12,6 +12,8 @@ namespace TechAdvocacia.Infra.Configurations
     {
         public void Configure(EntityTypeBuilder<Advogado> builder)
         {
+
+            // Configuração da relação 1:N entre Advogado e CasoJuridico
             builder
             .ToTable("Advogados")
             .HasKey(m => m.AdvogadoId);

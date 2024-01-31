@@ -12,8 +12,8 @@ namespace TechAdvocacia.Core.Entities
         public string? Tipo { get; set; }
         public required string Descricao { get; set; }
 
-        public CasoJuridico? CasoJuridicos { get; set; }
         public int CasoJuridicoId { get; set; }
+        public CasoJuridico? CasoJuridico { get; set; }
 
     }
 }

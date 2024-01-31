@@ -31,12 +31,18 @@ namespace TechAdvocacia.Infra.Migrations
                     b.Property<string>("CPF")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("CasoJuridicoId")
-                        .HasColumnType("int");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTimeOffset?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("AdvogadoId");
 
@@ -70,11 +76,9 @@ namespace TechAdvocacia.Infra.Migrations
 
                     b.HasKey("CasoJuridicoId");
 
-                    b.HasIndex("AdvogadoId")
-                        .IsUnique();
+                    b.HasIndex("AdvogadoId");
 
-                    b.HasIndex("ClienteId")
-                        .IsUnique();
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("CasoJuridicos", (string)null);
                 });
@@ -88,12 +92,18 @@ namespace TechAdvocacia.Infra.Migrations
                     b.Property<string>("CPF")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("CasoJuridicoId")
-                        .HasColumnType("int");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTimeOffset?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTimeOffset?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("ClienteId");
 
@@ -138,14 +148,14 @@ namespace TechAdvocacia.Infra.Migrations
             modelBuilder.Entity("TechAdvocacia.Core.Entities.CasoJuridico", b =>
                 {
                     b.HasOne("TechAdvocacia.Core.Entities.Advogado", "Advogado")
-                        .WithOne("CasoJuridico")
-                        .HasForeignKey("TechAdvocacia.Core.Entities.CasoJuridico", "AdvogadoId")
+                        .WithMany("CasosJuridicos")
+                        .HasForeignKey("AdvogadoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("TechAdvocacia.Core.Entities.Cliente", "Cliente")
-                        .WithOne("CasoJuridico")
-                        .HasForeignKey("TechAdvocacia.Core.Entities.CasoJuridico", "ClienteId")
+                        .WithMany("CasosJuridicos")
+                        .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -156,18 +166,18 @@ namespace TechAdvocacia.Infra.Migrations
 
             modelBuilder.Entity("TechAdvocacia.Core.Entities.Documento", b =>
                 {
-                    b.HasOne("TechAdvocacia.Core.Entities.CasoJuridico", "CasoJuridicos")
+                    b.HasOne("TechAdvocacia.Core.Entities.CasoJuridico", "CasoJuridico")
                         .WithMany("Documentos")
                         .HasForeignKey("CasoJuridicoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CasoJuridicos");
+                    b.Navigation("CasoJuridico");
                 });
 
             modelBuilder.Entity("TechAdvocacia.Core.Entities.Advogado", b =>
                 {
-                    b.Navigation("CasoJuridico");
+                    b.Navigation("CasosJuridicos");
                 });
 
             modelBuilder.Entity("TechAdvocacia.Core.Entities.CasoJuridico", b =>
@@ -177,7 +187,7 @@ namespace TechAdvocacia.Infra.Migrations
 
             modelBuilder.Entity("TechAdvocacia.Core.Entities.Cliente", b =>
                 {
-                    b.Navigation("CasoJuridico");
+                    b.Navigation("CasosJuridicos");
                 });
 #pragma warning restore 612, 618
         }

@@ -15,20 +15,19 @@ namespace TechAdvocacia.Infra.Configurations
             builder
             .ToTable("CasoJuridicos")
             .HasKey(m => m.CasoJuridicoId);
-            
-            builder
-            .HasOne(c => c.Cliente)
-            .WithOne(cj => cj.CasoJuridico)
-            .HasForeignKey<CasoJuridico>(c=>c.ClienteId);
+
 
             builder
-            .HasOne(m => m.Advogado)
-            .WithOne(cj => cj.CasoJuridico)
-            .HasForeignKey<CasoJuridico>(c=>c.AdvogadoId);
+            .HasOne(cj => cj.Advogado)
+            .WithMany(a => a.CasosJuridicos)
+            .HasForeignKey(cj => cj.AdvogadoId);
+
 
             builder
-            .HasMany(m => m.Documentos)
-            .WithOne(cj => cj.CasoJuridicos);
+            .HasOne(cj => cj.Cliente)
+            .WithMany(c => c.CasosJuridicos)
+            .HasForeignKey(cj => cj.ClienteId);
+
         }
     }
 }

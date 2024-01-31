@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {}
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {}
   },
   "projects": {
-    "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
         "projectName": "TechAdvocacia.Application",
-        "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
-        "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-        "outputPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
+          "/home/lores/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
-                "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj"
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj"
               }
             }
           }
@@ -57,21 +57,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
         "projectName": "TechAdvocacia.Core",
-        "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
-        "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-        "outputPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/obj/",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
+          "/home/lores/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -110,21 +110,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
         "projectName": "TechAdvocacia.Infra",
-        "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
-        "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-        "outputPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/obj/",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
+          "/home/lores/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -136,8 +136,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
-                "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj"
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj"
               }
             }
           }
@@ -193,21 +193,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
         "projectName": "TechAdvogado.webAPI",
-        "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
-        "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-        "outputPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvogado.webAPI/obj/",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
+          "/home/lores/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -219,8 +219,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
-                "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj"
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj"
               }
             }
           }
@@ -269,7 +269,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
         }
       }
     }

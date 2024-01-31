@@ -14,6 +14,11 @@ namespace TechAdvocacia.Infra.Configurations
             builder
             .ToTable("Documentos")
             .HasKey(m => m.DocumentoId);
+
+            builder
+            .HasOne(d => d.CasoJuridico)    // Um documento pertence a um único CasoJuridico
+            .WithMany(cj => cj.Documentos)   // Um CasoJuridico pode ter muitos Documentos
+            .HasForeignKey(d => d.CasoJuridicoId);
         }
     }
 }

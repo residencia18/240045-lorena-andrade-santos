@@ -9,7 +9,6 @@ namespace TechAdvocacia.Core.Entities
     {
         public int AdvogadoId { get; set; }
         public string? CNA { get; set; }
-        public int CasoJuridicoId { get; set; }
-        public CasoJuridico? CasoJuridico { get; set; }
+        public ICollection<CasoJuridico>? CasosJuridicos { get; set; } 
     }
 }

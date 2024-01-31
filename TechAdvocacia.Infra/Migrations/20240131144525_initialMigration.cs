@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TechAdvocacia.Infra.Migrations
 {
     /// <inheritdoc />
-    public partial class inicialMigration : Migration
+    public partial class initialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,9 @@ namespace TechAdvocacia.Infra.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     CNA = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CasoJuridicoId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    DeletedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
                     Nome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CPF = table.Column<string>(type: "longtext", nullable: true)
@@ -41,7 +43,9 @@ namespace TechAdvocacia.Infra.Migrations
                 {
                     ClienteId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CasoJuridicoId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    DeletedAt = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
                     Nome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CPF = table.Column<string>(type: "longtext", nullable: true)
@@ -116,14 +120,12 @@ namespace TechAdvocacia.Infra.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_CasoJuridicos_AdvogadoId",
                 table: "CasoJuridicos",
-                column: "AdvogadoId",
-                unique: true);
+                column: "AdvogadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CasoJuridicos_ClienteId",
                 table: "CasoJuridicos",
-                column: "ClienteId",
-                unique: true);
+                column: "ClienteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Documentos_CasoJuridicoId",

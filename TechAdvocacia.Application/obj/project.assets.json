@@ -705,19 +705,19 @@
     ]
   },
   "packageFolders": {
-    "/home/lorena-andrade-santos/.nuget/packages/": {}
+    "/home/lores/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+      "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
       "projectName": "TechAdvocacia.Application",
-      "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
-      "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-      "outputPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Application/obj/",
+      "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+      "packagesPath": "/home/lores/.nuget/packages/",
+      "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
+        "/home/lores/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -729,8 +729,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
-              "projectPath": "/home/lorena-andrade-santos/Documentos/advocacia/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj"
+            "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
+              "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj"
             }
           }
         }
@@ -760,7 +760,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
       }
     }
   }
