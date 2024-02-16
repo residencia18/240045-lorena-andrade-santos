@@ -1,0 +1,20 @@
+<div class="container">
+    <ul>
+        <li class="categoria" *ngFor="let categoria of categorias" (click)="oncategoriaSelecionada(categoria)">{{
+            categoria }}</li>
+    </ul>
+    <ul>
+        <li class="veiculo"  *ngFor="let veiculo of veiculos" (click)="onVeiculoSelecionado(veiculo)">{{ veiculo.Name }}</li>
+    </ul>
+    <div *ngIf="selecionaVeiculo">
+        <ul>
+            <li class="propriedade" *ngFor="let propriedade of veiculosProriedades" (click)="onPropriedadeClicada(propriedade)">{{
+                propriedade }}</li>
+        </ul>
+    </div>
+
+    <div  class="valor" *ngIf="selecionadaPropriedade">
+        <p>{{ selecionaVeiculo[selecionadaPropriedade] }}</p>
+    </div>
+    
+</div>
