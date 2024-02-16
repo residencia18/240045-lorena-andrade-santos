@@ -30,8 +30,9 @@ export class VeiculoCategoriasComponent implements OnInit {
   onVeiculoSelecionado(veiculo: any): void {
     this.selecionaVeiculo = veiculo;
     this.veiculosProriedades = Object.keys(veiculo);
+    this.selecionadaPropriedade = null;
   }
-  onPropriedadeClicada(propriedade: string){
+  onPropriedadeClicada(propriedade: any){
     this.selecionadaPropriedade = propriedade;
   }
 }

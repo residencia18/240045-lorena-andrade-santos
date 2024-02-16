@@ -1,22 +1,20 @@
-<div>
-    <h2>Categorias</h2>
+<div class="container">
     <ul>
-      <li *ngFor="let categoria of categorias" (click)="oncategoriaSelecionada(categoria)">{{ categoria }}</li>
+        <li class="categoria" *ngFor="let categoria of categorias" (click)="oncategoriaSelecionada(categoria)">{{
+            categoria }}</li>
     </ul>
-    <h3>Vehicles</h3>
     <ul>
-      <li *ngFor="let veiculo of veiculos" (click)="onVeiculoSelecionado(veiculo)">{{ veiculo.Name }}</li>
+        <li class="veiculo"  *ngFor="let veiculo of veiculos" (click)="onVeiculoSelecionado(veiculo)">{{ veiculo.Name }}</li>
     </ul>
     <div *ngIf="selecionaVeiculo">
-        <h3>Selected Vehicle Properties</h3>
         <ul>
-          <li *ngFor="let propriedade of veiculosProriedades"(click)="onPropriedadeClicada(propriedade)">{{ propriedade }}</li>
+            <li class="propriedade" *ngFor="let propriedade of veiculosProriedades" (click)="onPropriedadeClicada(propriedade)">{{
+                propriedade }}</li>
         </ul>
-      </div>
+    </div>
+
+    <div  class="valor" *ngIf="selecionadaPropriedade">
+        <p>{{ selecionaVeiculo[selecionadaPropriedade] }}</p>
+    </div>
     
-  <div *ngIf="onPropriedadeClicada">
-    <h3>Selected Property</h3>
-    {{ selecionadaPropriedade }}
-  </div>
-  </div>
-  
+</div>
