@@ -1,0 +1,101 @@
+<form [formGroup]="usuarioForm" (ngSubmit)="submitForm()">
+    <mat-form-field class="campos-medios">
+        <input matInput placeholder="Nome do Usuário" formControlName="nomeUsuario">
+        <mat-error
+            *ngIf="usuarioForm.get('nomeUsuario')?.hasError('required') && usuarioForm.get('nomeUsuario')?.touched">
+            O nome do usuário é obrigatório.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('nomeUsuario')?.invalid && (usuarioForm.get('nomeUsuario')?.dirty || usuarioForm.get('nomeUsuario')?.touched)">
+            O nome do usuário é inválido.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="campos-medios">
+        <input matInput type="password" placeholder="Senha" formControlName="password">
+        <mat-error *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
+            A senha é obrigatório.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('password')!.invalid && (usuarioForm.get('password')!.dirty || usuarioForm.get('password')!.touched)">
+            Senha inválida.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-maiores">
+        <input matInput placeholder="E-mail" formControlName="email">
+        <mat-error
+            *ngIf="usuarioForm.get('email')?.invalid && (usuarioForm.get('email')?.dirty || usuarioForm.get('email')?.touched)">
+            O e-mail do usuário é inválido.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-maiores">
+        <input matInput placeholder="Nome completo" formControlName="nomeCompleto">
+        <mat-error
+            *ngIf="usuarioForm.get('nomeCompleto')?.hasError('required') && usuarioForm.get('nomeCompleto')?.touched">
+            Nome completo é obrigatório.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('nomeCompleto')?.hasError('invalidFullName') && usuarioForm.get('nomeCompleto')?.touched">
+            Nome completo deve conter um nome e um sobrenome.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-medios">
+        <input matInput placeholder="Telefone (99) 99999-9999" formControlName="telefone">
+        <mat-error *ngIf="usuarioForm.get('telefone')?.hasError('required') && usuarioForm.get('telefone')?.touched">
+            Telefone é obrigatório.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('telefone')?.hasError('telefoneInvalido') && usuarioForm.get('telefone')?.touched">
+            Telefone inválido. Por favor, insira um número de telefone válido.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-maiores">
+        <input matInput placeholder="Endereço" formControlName="endereco">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-medios">
+        <input matInput type="date" placeholder="Data de Nascimento" formControlName="dataNascimento">
+        <mat-error
+            *ngIf="usuarioForm.get('dataNascimento')?.hasError('required') && usuarioForm.get('dataNascimento')?.touched">
+            Data de Nascimento é obrigatória.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('dataNascimento')?.hasError('dataInvalida') && usuarioForm.get('dataNascimento')?.touched">
+            Data de Nascimento inválida.
+        </mat-error>
+        <mat-error
+            *ngIf="usuarioForm.get('dataNascimento')?.hasError('menorDeIdade') && usuarioForm.get('dataNascimento')?.touched">
+            Você deve ter pelo menos 18 anos.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-medios">
+        <mat-label>Gênero</mat-label>
+        <mat-select formControlName="genero">
+            <mat-option value="masculino">Masculino</mat-option>
+            <mat-option value="feminino">Feminino</mat-option>
+            <mat-option value="outro">Outro</mat-option>
+        </mat-select>
+        <mat-error *ngIf="usuarioForm.get('genero')?.hasError('required') && usuarioForm.get('genero')?.touched">
+            Gênero é obrigatório.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="campos-medios">
+        <mat-label>Profissão</mat-label>
+        <mat-select formControlName="profissao">
+            <mat-option *ngFor="let profissao of profissoes" [value]="profissao">
+                {{ profissao }}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="usuarioForm.get('profissao')?.hasError('required') && usuarioForm.get('profissao')?.touched">
+            Profissão é obrigatória.
+        </mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button type="submit" class="botao">Submit</button>
+</form>

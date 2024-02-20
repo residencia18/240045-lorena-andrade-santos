@@ -1,0 +1,28 @@
+.campos-maiores {
+    width: 510px;
+  }
+  .campos-medios{
+    margin-right: 10px;
+    width: 250px;
+
+  }
+
+  .botao {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remover borda */
+    border-radius: 4px; /* Arredondar cantos */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor ao passar por cima */
+    align-content: center;
+  }
+  
+  .botao:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar por cima */
+  }
+  
+  .botao:active {
+    background-color: #004080; /* Cor de fundo quando pressionado */
+  }
+  
