@@ -1,0 +1,27 @@
+<h2>Templates</h2>
+<h3>Test interpolations</h3>
+
+
+{{name}} - {{age}}
+
+<button [disabled]="isDislabled">Meu botao</button>
+<!-- <img [src]="caminho" [alt]="name"> -->
+<p>Atribute binding</p>
+<p [attr.title]="name" [attr.aria-label]="name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis natus voluptate adipisci cupiditate eum quasi quibusdam asperiores enim, esse, dignissimos aut cumque vel, harum exercitationem commodi explicabo voluptatum illo animi.</p>
+<h2>Class and style binding</h2>
+<p [class.background-red]="age>=32"[class.background-blue]="age<32">{{name}}</p>
+
+<button (click)="sum()"> + </button>
+<button (click)="sub()"> - </button>
+<input (keydown.shift.t)="onKeyDown($event)">
+<div (mousemove)="onMouse($event)" style="background-color: lightseagreen; width: 200px; height: 200px"></div>
+
+<input [(ngModel)]="name"/>{{name}}
+
+<div [ngClass]="{'background-red':age<32, 'background-blue': age >= 32}">Utilizando ngClass</div>
+
+<div [ngStyle]="{
+    color: age >= 32 ? 'gray' : 'green',
+    'font-size': age >= 32 ? '40px' : '60px',
+}">Utilizando ngStyle</div>
+
