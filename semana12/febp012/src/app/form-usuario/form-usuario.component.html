@@ -1,6 +1,6 @@
 <form [formGroup]="usuarioForm" (ngSubmit)="submitForm()">
     <mat-form-field class="campos-medios">
-        <input matInput placeholder="Nome do Usuário" formControlName="nomeUsuario">
+        <input matInput placeholder="Nome do Usuário" formControlName="nomeUsuario" (focus)="registrarEvento('Campo Focado - Nome do Usuário')">
         <mat-error
             *ngIf="usuarioForm.get('nomeUsuario')?.hasError('required') && usuarioForm.get('nomeUsuario')?.touched">
             O nome do usuário é obrigatório.
@@ -11,7 +11,7 @@
         </mat-error>
     </mat-form-field>
     <mat-form-field appearance="fill" class="campos-medios">
-        <input matInput type="password" placeholder="Senha" formControlName="password">
+        <input matInput type="password" placeholder="Senha" formControlName="password" (focus)="registrarEvento('Campo Focado - Senha')">
         <mat-error *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">
             A senha é obrigatório.
         </mat-error>
@@ -22,7 +22,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="campos-maiores">
-        <input matInput placeholder="E-mail" formControlName="email">
+        <input matInput placeholder="E-mail" formControlName="email" (focus)="registrarEvento('Campo Focado - Email')">
         <mat-error
             *ngIf="usuarioForm.get('email')?.invalid && (usuarioForm.get('email')?.dirty || usuarioForm.get('email')?.touched)">
             O e-mail do usuário é inválido.
@@ -30,7 +30,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="campos-maiores">
-        <input matInput placeholder="Nome completo" formControlName="nomeCompleto">
+        <input matInput placeholder="Nome completo" formControlName="nomeCompleto" (focus)="registrarEvento('Campo Focado - Nome')">
         <mat-error
             *ngIf="usuarioForm.get('nomeCompleto')?.hasError('required') && usuarioForm.get('nomeCompleto')?.touched">
             Nome completo é obrigatório.
@@ -42,7 +42,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="campos-medios">
-        <input matInput placeholder="Telefone (99) 99999-9999" formControlName="telefone">
+        <input matInput placeholder="Telefone (99) 99999-9999" formControlName="telefone" (focus)="registrarEvento('Campo Focado - Telefone')">
         <mat-error *ngIf="usuarioForm.get('telefone')?.hasError('required') && usuarioForm.get('telefone')?.touched">
             Telefone é obrigatório.
         </mat-error>
@@ -53,11 +53,11 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="campos-maiores">
-        <input matInput placeholder="Endereço" formControlName="endereco">
+        <input matInput placeholder="Endereço" formControlName="endereco" (focus)="registrarEvento('Campo Focado - Endereço')">
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="campos-medios">
-        <input matInput type="date" placeholder="Data de Nascimento" formControlName="dataNascimento">
+        <input matInput type="date" placeholder="Data de Nascimento" formControlName="dataNascimento" (focus)="registrarEvento('Campo Focado - Data de Nascimento')">
         <mat-error
             *ngIf="usuarioForm.get('dataNascimento')?.hasError('required') && usuarioForm.get('dataNascimento')?.touched">
             Data de Nascimento é obrigatória.
@@ -97,5 +97,5 @@
     </mat-form-field>
     <br>
     <br>
-    <button class="botao" mat-raised-button type="submit">Submit</button>
+    <button class="botao"  mat-raised-button type="submit" (click)="salvarFormulario()">Submit</button>
 </form>
