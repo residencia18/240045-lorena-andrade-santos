@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormEventosService } from '../form-eventos.service';
 
 
 @Component({
@@ -11,8 +12,8 @@ export class FormUsuarioComponent  implements OnInit {
   usuarioForm!: FormGroup;
   hide = true;
   profissoes: string[] = ['Engenheiro', 'Médico', 'Advogado', 'Professor', 'Programador', 'Designer', 'Outra'];
-  constructor(private formBuilder: FormBuilder) { }
-
+  constructor(private formBuilder: FormBuilder, private formEventos: FormEventosService) { }
+  
   ngOnInit(): void {
     this.usuarioForm = this.formBuilder.group({
       nomeUsuario: ['', [Validators.required, Validators.maxLength(12), this.noSpacesValidator]],
@@ -23,17 +24,35 @@ export class FormUsuarioComponent  implements OnInit {
       endereco:['',[Validators.required]],
       dataNascimento:['',[Validators.required, this.validarDataNascimento]],
       genero: ['', [Validators.required]],
+      profissao: [''] 
 
     });
   }
+// Método para registrar evento de interação do usuário
+registrarEvento(evento: string) {
+  this.formEventos.registrarEvento(evento);
+}
 
+// Método para salvar o estado do formulário
+salvarEstadoFormulario() {
+  this.formEventos.salvarEstadoFormulario(this.usuarioForm);
+}
+
+// Método para limpar o estado do formulário
+limparEstadoFormulario() {
+  this.formEventos.limparEstadoFormulario();
+}
   noSpacesValidator(control: AbstractControl) {
     if (control.value && control.value.trim().indexOf(' ') >= 0) {
       return { 'noSpaces': true };
     }
     return null;
   }
-
+  salvarFormulario() {
+    this.salvarEstadoFormulario();
+    this.submitForm();
+  }
+  
   submitForm() {
     if (this.usuarioForm.valid) {
       const userData = this.usuarioForm.value;
