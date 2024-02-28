@@ -17,15 +17,6 @@ public class MensagemController : ControllerBase, IMensagemController
     public List<MensagemViewModel> _mensagens => _mensagenService.GetAll().ToList();
     public MensagemController(IMensagemService mensagemService) => _mensagenService = mensagemService;
     
-    [HttpPost("Mensagem")]
-    public IActionResult Create(MensagemInputModel input)
-    {
-       var id = _mensagenService.Create(input);
-       if(id == 0) return BadRequest();
-
-       return Ok(id);
-    }
-
     [HttpGet("Mensagem/all")]
     public IActionResult GetAll()
     {
@@ -42,6 +33,15 @@ public class MensagemController : ControllerBase, IMensagemController
 
         return NotFound();
     }
+    [HttpPost("Mensagem")]
+    public IActionResult Create(MensagemInputModel input)
+    {
+       var id = _mensagenService.Create(input);
+       if(id == 0) return BadRequest();
+
+       return Ok(id);
+    }
+
 
     [HttpPost("Mensagem/{id}")]
     public IActionResult Update(int id, MensagemInputModel input)

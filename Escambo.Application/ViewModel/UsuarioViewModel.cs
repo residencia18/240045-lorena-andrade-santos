@@ -10,7 +10,6 @@ namespace Escambo.Application.ViewModels
         public int UsuarioId { get; set; }
         public required string Nome { get; set; }
         public string? Email { get; set; }
-        public string? Senha { get; set; }
         public string? Permissoes { get; set; }
         public string? CPF { get; set; }
         public string? RG { get; set; }

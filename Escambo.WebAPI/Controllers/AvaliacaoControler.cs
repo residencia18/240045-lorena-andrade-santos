@@ -16,6 +16,19 @@ public class AvaliacaoController : ControllerBase, IAvaliacaoController
     public List<AvaliacaoViewModel> _avaliacoes => _avaliacaoService.GetAll().ToList();
     public AvaliacaoController(IAvaliacaoService avaliacaoService) => _avaliacaoService = avaliacaoService;
     
+    [HttpGet("Avaliacao/all")]
+    public IActionResult GetAll()
+    {
+        return Ok(_avaliacoes);
+    }
+    [HttpGet("Avaliacao/{id}")]
+    public IActionResult GetById(int id)
+    {
+       var avaliacao = _avaliacaoService.GetById(id);
+       if(avaliacao is not null) return Ok(avaliacao);
+
+       return NotFound();
+    }
     [HttpPost("Avaliacao")]
     public IActionResult Create(AvaliacaoInputModel input)
     {
@@ -31,19 +44,6 @@ public class AvaliacaoController : ControllerBase, IAvaliacaoController
        return Ok();
     }
 
-    [HttpGet("Avaliacao/all")]
-    public IActionResult GetAll()
-    {
-        return Ok(_avaliacoes);
-    }
-    [HttpGet("Avaliacao/{id}")]
-    public IActionResult GetById(int id)
-    {
-       var avaliacao = _avaliacaoService.GetById(id);
-       if(avaliacao is not null) return Ok(avaliacao);
-
-       return NotFound();
-    }
      [HttpPost("Avaliacao/{id}")]
     public IActionResult Update(int id, AvaliacaoInputModel input)
     {

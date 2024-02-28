@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Escambo.Application.InputModels;
 using Escambo.Application.Services.Interfaces;
+using Escambo.Application.Services.Security;
 using Escambo.Application.ViewModels;
 using Escambo.Dommain.Model;
 using Escambo.Infra.Context;
@@ -25,11 +26,12 @@ namespace Escambo.Application.Services
         // }
         public int Create(UsuarioInputModel usuarioInput)
         {
+            var senhaHash = Utils.HashPassword(usuarioInput.Senha);
             var novoUsuario = new Usuario
             {
                 Nome = usuarioInput.Nome,
                 Email = usuarioInput.Email,
-                Senha = usuarioInput.Senha,
+                Senha = senhaHash,
                 Permissoes = usuarioInput.Permissoes,
                 CPF = usuarioInput.CPF,
                 RG = usuarioInput.RG,
@@ -65,7 +67,6 @@ namespace Escambo.Application.Services
                 UsuarioId = u.UsuarioId,
                 Email = u.Email,
                 Nome = u.Nome!,
-                Senha = u.Senha,
                 Permissoes = u.Permissoes,
                 CPF = u.CPF,
                 RG = u.RG,
@@ -108,7 +109,6 @@ namespace Escambo.Application.Services
                 UsuarioId = _usuarios.UsuarioId,
                 Email = _usuarios.Email,
                 Nome = _usuarios.Nome!,
-                Senha = _usuarios.Senha,
                 Permissoes = _usuarios.Permissoes,
                 CPF = _usuarios.CPF,
                 RG = _usuarios.RG,
@@ -137,9 +137,11 @@ namespace Escambo.Application.Services
             var usuarioToUpdate = _context.Usuarios.Find(id);
             if (usuarioToUpdate == null)
                 return;
+                
+            var senhaHash = Utils.HashPassword(usuarioToUpdate.Senha);
             usuarioToUpdate.Nome = usuario.Nome;
             usuarioToUpdate.Email = usuario.Email;
-            usuarioToUpdate.Senha = usuario.Senha;
+            usuarioToUpdate.Senha = senhaHash;
             usuarioToUpdate.Permissoes = usuario.Permissoes;
             usuarioToUpdate.CPF = usuario.CPF;
             usuarioToUpdate.RG = usuario.RG;
