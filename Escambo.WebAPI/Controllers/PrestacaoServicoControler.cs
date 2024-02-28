@@ -17,21 +17,7 @@ public class PrestacaoServicoControler : ControllerBase, IPrestacaoServicoContro
 
     public List<PrestacaoServicoViewModel> _prestacaoServicos => _prestacaoServicoService.GetAll().ToList();
     public PrestacaoServicoControler(IPrestacaoServicoService prestacaoServicoService) => _prestacaoServicoService = prestacaoServicoService;
-    [HttpPost("PrestacaoServico")]
-    public IActionResult Create(PrestacaoServicoInputModel input)
-    {
-       var id = _prestacaoServicoService.Create(input);
-       if(id == 0) return BadRequest();
-       return Ok(id);
-    }
-
-    [HttpDelete("PrestacaoServico/{id}")]
-    public IActionResult Delete(int id)
-    {
-        _prestacaoServicoService.Delete(id);
-        return Ok();
-    }
-
+   
     [HttpGet("PrestacaoServico/all")]
     public IActionResult GetAll()
     {
@@ -45,6 +31,20 @@ public class PrestacaoServicoControler : ControllerBase, IPrestacaoServicoContro
         var _prestacaoServicos = _prestacaoServicoService.GetById(id);
         if(_prestacaoServicos is not null)  return Ok(_prestacaoServicos);
         return NotFound();
+    }
+    [HttpPost("PrestacaoServico")]
+    public IActionResult Create(PrestacaoServicoInputModel input)
+    {
+       var id = _prestacaoServicoService.Create(input);
+       if(id == 0) return BadRequest();
+       return Ok(id);
+    }
+
+    [HttpDelete("PrestacaoServico/{id}")]
+    public IActionResult Delete(int id)
+    {
+        _prestacaoServicoService.Delete(id);
+        return Ok();
     }
 
     [HttpPut("PrestacaoServico/{id}")]

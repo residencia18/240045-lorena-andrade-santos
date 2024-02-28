@@ -22,14 +22,6 @@ public class UsuarioController : ControllerBase, IUsuarioController
         return Ok(_usuarios); 
     }
 
-    [HttpPost("Usuario")]
-    public IActionResult Create(UsuarioInputModel input)
-    {
-       var id =  _usuarioService.Create(input);
-       if(id == 0) return BadRequest();
-       return Ok(id);
-    }
-
     [HttpGet("Usuario/{id}")]
     public IActionResult GetById(int id)
     {
@@ -39,6 +31,14 @@ public class UsuarioController : ControllerBase, IUsuarioController
         return NotFound();
        
     }
+    [HttpPost("Usuario")]
+    public IActionResult Create(UsuarioInputModel input)
+    {
+       var id =  _usuarioService.Create(input);
+       if(id == 0) return BadRequest();
+       return Ok(id);
+    }
+
 
     [HttpPut("Usuario/{id}")]
     public IActionResult Update(int id, UsuarioInputModel input)

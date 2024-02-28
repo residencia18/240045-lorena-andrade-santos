@@ -15,6 +15,22 @@ namespace Escambo.WebAPI.Controllers
         public List<AnuncioViewModel> _anuncios => _anuncioService.GetAll().ToList();
         public AnuncioControler(IAnuncioService anuncioService) => _anuncioService = anuncioService;
 
+        [HttpGet("Anuncio/all")]
+
+        public IActionResult GetAll()
+        {
+            if(_anuncios is not null) return Ok(_anuncios);
+            return NotFound();
+        }
+        [HttpGet("Anuncio/{id}")]
+        public IActionResult GetById(int id)
+        {
+            var anuncio = _anuncioService.GetById(id);
+            if(anuncio is not null) return Ok(anuncio);
+
+            return NotFound();
+        }
+        
         [HttpPost("Anuncio")]
         public IActionResult Create(AnuncioInputModel input)
         {
@@ -32,21 +48,6 @@ namespace Escambo.WebAPI.Controllers
 
         }
 
-        [HttpGet("Anuncio/all")]
-
-        public IActionResult GetAll()
-        {
-            if(_anuncios is not null) return Ok(_anuncios);
-            return NotFound();
-        }
-        [HttpGet("Anuncio/{id}")]
-        public IActionResult GetById(int id)
-        {
-            var anuncio = _anuncioService.GetById(id);
-            if(anuncio is not null) return Ok(anuncio);
-
-            return NotFound();
-        }
         [HttpPut("Anuncio/{id}")]   
         public IActionResult Update(int id, AnuncioInputModel input)
         {
