@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xfk8cOo+9039KtdiVM1K5nLosOV66+DnExc8p4UIf/jhuW3gbxA9964Kj7hsw/1DYGNVHvJCDhSKDSWa1gf8iA==",
+  "dgSpecHash": "pgutrNQ6fBKLTam4kOARiLqw6obXEW/UzFAZmkFSn0jaBwjjQnbNToG6O7TFQNegKxvQHU7dVBPzb/nTAq/iQA==",
   "success": true,
   "projectFilePath": "/home/daniel-oliveira-da-silva/Área de trabalho/RTIC18-ProjetoPessoal-G1/Escambo.Application/Escambo.Application.csproj",
   "expectedPackageFiles": [
@@ -17,8 +17,13 @@
     "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.identitymodel.abstractions/7.3.1/microsoft.identitymodel.abstractions.7.3.1.nupkg.sha512",
+    "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.3.1/microsoft.identitymodel.jsonwebtokens.7.3.1.nupkg.sha512",
+    "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.identitymodel.logging/7.3.1/microsoft.identitymodel.logging.7.3.1.nupkg.sha512",
+    "/home/daniel-oliveira-da-silva/.nuget/packages/microsoft.identitymodel.tokens/7.3.1/microsoft.identitymodel.tokens.7.3.1.nupkg.sha512",
     "/home/daniel-oliveira-da-silva/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512",
-    "/home/daniel-oliveira-da-silva/.nuget/packages/pomelo.entityframeworkcore.mysql/7.0.0/pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512"
+    "/home/daniel-oliveira-da-silva/.nuget/packages/pomelo.entityframeworkcore.mysql/7.0.0/pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
+    "/home/daniel-oliveira-da-silva/.nuget/packages/system.identitymodel.tokens.jwt/7.3.1/system.identitymodel.tokens.jwt.7.3.1.nupkg.sha512"
   ],
   "logs": []
 }

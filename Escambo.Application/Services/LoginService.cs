@@ -3,14 +3,17 @@ using Escambo.Infra.Context;
 using TechMed.Application.InputModels;
 using TechMed.Application.Services.Interfaces;
 using TechMed.Application.ViewModels;
+using TechMed.Infrastructure.Auth;
 
 namespace Escambo.Application.Services;
 
 public class LoginService : ILoginService
 {
     private readonly EscamboContext _context;
-    public LoginService(EscamboContext context){
+    private readonly IAuthService _authService;
+    public LoginService(EscamboContext context, IAuthService authService){
         _context = context;
+        _authService = authService;
     }
     public LoginViewModel? Authenticate(LoginInputModel login)
     {
@@ -22,12 +25,19 @@ public class LoginService : ILoginService
 
         if (user is not null)
         {
-            // _token = TokenService.GenerateToken(user);  gere o token aqui
-            return new LoginViewModel
-            {
-                Username = user.Email,
-                Token = _token,
-            };
+            if(user.Senha == _password && user.Email == login.Username){
+                _token = _authService.GenerateJwtToken(login.Username, "User");
+
+                if (_token !=""){
+                    return new LoginViewModel
+                    {
+                        Username = user.Email,
+                        Token = _token,
+                    };
+                }
+            }
+            
+           
         }
        
        return null;
