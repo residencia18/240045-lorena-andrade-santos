@@ -2,6 +2,7 @@ using Escambo.Application.Services;
 using Escambo.Application.Services.Interfaces;
 using Escambo.Infra.Context;
 using Microsoft.EntityFrameworkCore;
+using TechMed.Application.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddScoped<IMensagemService, MensagemService>();
 builder.Services.AddScoped<IAvaliacaoService, AvaliacaoService>();
 builder.Services.AddScoped<IConversaService, ConversaService>();
 builder.Services.AddScoped<IPrestacaoServicoService, PrestacaoServicoService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
  
 builder.Services.AddDbContext<EscamboContext>(options =>
 {
