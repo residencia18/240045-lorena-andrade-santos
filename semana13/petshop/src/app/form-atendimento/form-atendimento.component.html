@@ -1,0 +1,11 @@
+    <form [formGroup]="atendimentoForm" (ngSubmit)="adicionarBilhete()" class="flight">
+        <input type="text" formControlName="nomeAnimal" placeholder="Nome do Animal">
+        <input type="date" formControlName="dataEntrada" placeholder="Data de Entrada">
+        <input type="time" formControlName="horaEntrada" placeholder="Hora de Entrada">
+        <input type="time" formControlName="horaPrevisaoSaida" placeholder="Hora de Prsvisao de Saída">
+        <input type="number" step="0.01" formControlName="preco" placeholder="Valor">
+        <input type="text" formControlName="telefoneTutor" placeholder="Telefone do Tutor">
+        <input type="text" formControlName="nomeTutor" placeholder="Nome do Tutor">
+        <button type="submit">Enviar</button>
+      </form>
+    

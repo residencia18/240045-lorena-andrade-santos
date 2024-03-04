@@ -1,0 +1,27 @@
+<p *ngIf="loadedAtendimentos.length < 1">Não existem atendimentos cadastrados!</p>
+<table class="tickets-table" *ngIf="loadedAtendimentos.length >=1">
+    <thead>
+      <tr>
+        <th>Nome do Animal:</th>
+        <th>Data de Entrada:</th>
+        <th>Hora de Entrada:</th>
+        <th>Hora de Previsao de Saída:</th>
+        <th>Valor:</th>
+        <th>Telefone do Tutor:</th>
+        <th>Nome do Tutor:</th>
+        <th><button (click)="apagarTudo()">Apagar Tudo</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let atendimento of loadedAtendimentos">
+        <td>{{ atendimento.nomeAnimal }}</td>
+        <td>{{ atendimento.dataEntrada }}</td>
+        <td>{{ atendimento.horaEntrada }}</td>
+        <td>{{ atendimento.horaPrevisaoSaida }}</td>
+        <td>{{ atendimento.preco }}</td>
+        <td colspan="1">{{ atendimento.nomeTutor }}</td>
+        <td colspan="1">{{ atendimento.telefoneTutor }}</td>
+        <td><button type="button" class="btnEditar" routerLink="/editarAtendimento/{{atendimento.id}}">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
