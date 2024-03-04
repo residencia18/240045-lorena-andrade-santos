@@ -1,34 +1,35 @@
 body {
     background-color: #F3FDE8;
     text-align: center;
-    font-family: Arial, sans-serif; /* Escolha uma fonte legível */
+    font-family: Arial, sans-serif;
     padding: 20px;
 }
 
 .title {
-    color: #333; /* Cor do título */
+    color: #000; /* Cor do título */
 }
 
 .listas {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens */
-    gap: 20px; /* Espaçamento entre os itens */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os itens */
 }
 
 .listas > div {
-    width: 200px; /* Largura fixa dos itens */
-    background-color: #fff; /* Cor de fundo dos itens */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px; /* Padding maior */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .listas a {
-    text-decoration: none; /* Remove sublinhado padrão */
-    color: #007bff; /* Cor dos links */
+    text-decoration: none;
+    color: #007bff;
 }
 
 .listas a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
+    color: #0056b3; /* Cor mais escura ao passar o mouse */
 }
