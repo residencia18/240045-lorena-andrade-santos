@@ -36,7 +36,6 @@ export class BancoService {
     //vem do firebase nesse formato
     //ahsduiashuhui:Object
     //dasdasdasdasd:Object
-
     return this.http.get<{ [key: string]: Atendimento }>('https://petshop-b2745-default-rtdb.firebaseio.com/atendimento.json').pipe(
       map((responseData) => {
         const listaArray: Atendimento[] = [];
