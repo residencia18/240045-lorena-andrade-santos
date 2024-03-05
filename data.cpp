@@ -4,7 +4,7 @@
 using namespace std;
 
     Data::~Data() {
-        // Implementação do destrutor, se necessário
+        
     }
     Data::Data()
     {

@@ -1,10 +1,14 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "deque": "cpp",
         "string": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
         "iomanip": "cpp"
+=======
+        "string": "cpp"
+>>>>>>> 88d456c (subindo hora)
     }
 }
