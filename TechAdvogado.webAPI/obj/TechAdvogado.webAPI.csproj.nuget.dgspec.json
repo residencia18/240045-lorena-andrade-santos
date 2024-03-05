@@ -1,0 +1,277 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {}
+  },
+  "projects": {
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "projectName": "TechAdvocacia.Application",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lores/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "projectName": "TechAdvocacia.Core",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lores/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
+        "projectName": "TechAdvocacia.Infra",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/TechAdvocacia.Infra.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lores/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Core/TechAdvocacia.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
+        "projectName": "TechAdvogado.webAPI",
+        "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/TechAdvogado.webAPI.csproj",
+        "packagesPath": "/home/lores/.nuget/packages/",
+        "outputPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvogado.webAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lores/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj": {
+                "projectPath": "/home/lores/tic18/d3/dotnet_mb/TechAdvocacia.Application/TechAdvocacia.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
