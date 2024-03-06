@@ -5,7 +5,7 @@
             <a routerLink="/principal" *ngIf="estaAutenticado" routerLinkActive="active">Home</a>
             <a routerLink="/cadastrarAnimal" *ngIf="estaAutenticado" routerLinkActive="active">Adicionar</a>
             <a routerLink="/listarAnimal" *ngIf="estaAutenticado" routerLinkActive="active">Listar</a>
-            <a routerLonk="/cadastrarPeso" *ngIf="estaAutenticado" routerLinkActive="active">Cadastrar Peso</a>
+            <a routerLink="/cadastrarPeso" *ngIf="estaAutenticado" routerLinkActive="active">Cadastrar Peso</a>
             <a *ngIf="estaAutenticado" (click)="logout()" style="cursor: pointer;">Logout</a>
         </div>
     </div>
