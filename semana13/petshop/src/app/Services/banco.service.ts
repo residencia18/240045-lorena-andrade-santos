@@ -9,7 +9,7 @@ import { exhaustMap, map, take } from 'rxjs';
 
 export class BancoService {
 
-  apiURL = 'https://petshop-9fb48-default-rtdb.firebaseio.com/atendimento.json';
+  apiURL = 'https://petshop-b2745-default-rtdb.firebaseio.com/atendimento.json';
 
   constructor(private http: HttpClient) { }
 
@@ -36,7 +36,7 @@ export class BancoService {
     //ahsduiashuhui:Object
     //dasdasdasdasd:Object
 
-    return this.http.get<{ [key: string]: Atendimento }>('https://petshop-9fb48-default-rtdb.firebaseio.com/atendimento.json').pipe(
+    return this.http.get<{ [key: string]: Atendimento }>('https://petshop-b2745-default-rtdb.firebaseio.com/atendimento.json').pipe(
       map((responseData) => {
         const listaArray: Atendimento[] = [];
         for (const key in responseData) {
