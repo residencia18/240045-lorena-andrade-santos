@@ -1,33 +1,30 @@
-<form [formGroup]="suinoForm" (ngSubmit)="adicionarSuino()" class="suinoForm">
-    <mat-form-field appearance="fill">
+<form [formGroup]="suinoForm" (ngSubmit)="adicionarSuino($event)" class="suinoForm">
+  <mat-form-field appearance="fill">
       <mat-label>Brinco do animal</mat-label>
       <input matInput formControlName="brinco" placeholder="Brinco do animal">
     </mat-form-field>
-  
     <mat-form-field appearance="fill">
       <mat-label>Brinco do pai</mat-label>
       <input matInput formControlName="brincoPai" placeholder="Brinco do pai">
     </mat-form-field>
-  
     <mat-form-field appearance="fill">
       <mat-label>Brinco da mãe</mat-label>
       <input matInput formControlName="brincoMae" placeholder="Brinco da mãe">
     </mat-form-field>
-  
+  <br>
     <mat-form-field appearance="fill">
       <mat-label>Data de Nascimento</mat-label>
       <input matInput [matDatepicker]="pickerNascimento" formControlName="dataNascimento">
       <mat-datepicker-toggle matSuffix [for]="pickerNascimento"></mat-datepicker-toggle>
       <mat-datepicker #pickerNascimento></mat-datepicker>
     </mat-form-field>
-  
     <mat-form-field appearance="fill">
       <mat-label>Data da saída</mat-label>
       <input matInput [matDatepicker]="pickerSaida" formControlName="dataSaida">
       <mat-datepicker-toggle matSuffix [for]="pickerSaida"></mat-datepicker-toggle>
       <mat-datepicker #pickerSaida></mat-datepicker>
     </mat-form-field>
-  
+  <br>
     <mat-form-field appearance="fill">
       <mat-label>Status</mat-label>
       <mat-select formControlName="status">
@@ -36,7 +33,7 @@
         <mat-option value="Morto">Morto</mat-option>
       </mat-select>
     </mat-form-field>
-  
+  <br>
     <mat-form-field appearance="fill">
       <mat-label>Sexo</mat-label>
       <mat-select formControlName="sexo">
@@ -44,7 +41,6 @@
         <mat-option value="F">F</mat-option>
       </mat-select>
     </mat-form-field>
-  
-    <button mat-raised-button color="primary" type="submit">Enviar</button>
+    <button mat-raised-button id="enviar" color="primary" type="submit">Enviar</button>
   </form>
   

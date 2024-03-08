@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AutenticaService } from '../../autentica.service'; 
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit{
   private inscricao!: Subscription;
   estaAutenticado = false;
 
-  constructor(private autenticaService: AutenticaService) { }
+  constructor(private autenticaService: AutenticaService,
+    private route: Router) { }
 
 
   ngOnInit(): void {
@@ -28,5 +30,6 @@ export class HeaderComponent implements OnInit{
   logout() {
     this.autenticaService.logout();
     console.log('logout');
+    this.route.navigate(['/login']);
   }
 }

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './Pages/principal/principal.component';
-import { LoginComponent } from './Pages/login/login.component';
+import { LoginComponent } from './auth/login.component';
 import { CadastrarComponent } from './Pages/cadastrar/cadastrar.component';
 import { ListarComponent } from './Pages/listar/listar.component';
 import { EditarComponent } from './Pages/editar/editar.component';
@@ -17,7 +17,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { initializeApp, getApps} from "firebase/app";
 //@angular/material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -38,6 +40,7 @@ const routes: Routes = [
   //{ path: 'editarAnimal/:id', component: EditarComponent },
   // { path: 'editarPeso/:id',  component: EditarPesoComponent},
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +79,13 @@ const routes: Routes = [
     }),
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

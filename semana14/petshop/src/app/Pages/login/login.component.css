@@ -1,31 +1,31 @@
 
 
 mat-card {
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-  }
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  border: 0px;
+}
+
+.flex-item:nth-child(1) {
+  margin-top: 30px;
   
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 90px;
-  }
-  
-  .flex-item:nth-child(1) {
-    margin-top: 30px;
-    
-  }
-  
-  .flex-item{
-    margin-bottom: 30px;
-  }
-  
-  .icon-button{
-    border: 0;
-    background: transparent;
-    margin-right: 5px;
-  }
-  
-  
+}
+
+.flex-item{
+  margin-bottom: 30px;
+}
+
+.icon-button{
+  border: 0;
+  background: transparent;
+  margin-right: 5px;
+}
+

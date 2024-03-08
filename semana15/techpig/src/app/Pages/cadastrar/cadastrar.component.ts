@@ -17,13 +17,13 @@ export class CadastrarComponent implements OnInit {
       brincoPai: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       brincoMae: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       dataNascimento: ['', Validators.required],
-      dataSaida: ['', Validators.required],
+      dataSaida: [''],
       status: ['', Validators.required],
       sexo: ['', Validators.required],
     });
   }
 
-  adicionarSuino() {
+  adicionarSuino(event: Event) {
     if (this.suinoForm.valid) {
       console.log(this.suinoForm.value);
       this.servico.adicionarSuino(this.suinoForm.value);

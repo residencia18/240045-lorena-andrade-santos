@@ -2,8 +2,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { exhaustMap, map, take } from 'rxjs';
-import { Suino } from './Models/suino.model';
-import { PesoSuino } from './Models/pesoSuino.model';
+import { Suino } from './Models/suino';
+import { PesoSuino } from './Models/pesoSuino';
 
 @Injectable({
   providedIn: 'root'
