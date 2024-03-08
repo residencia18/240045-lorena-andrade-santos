@@ -1,7 +1,7 @@
 // PetShop/src/app/banco.service.ts
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { exhaustMap, map, take } from 'rxjs';
+import { Observable, exhaustMap, map, take } from 'rxjs';
 import { Suino } from './Models/suino';
 import { PesoSuino } from './Models/pesoSuino';
 
@@ -48,7 +48,19 @@ export class BancoService {
       `https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos/${id}.json`
     );
   }
+  verificarBrincoExistente(brinco: string): Observable<boolean> {
+    const url = 'https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos.json';
 
+    return this.http.get<any>(url).pipe(
+      map((suinos: any) => {
+        if (suinos) {
+          const brincos = Object.values(suinos).map((suino: any) => suino.brinco);
+          return brincos.includes(brinco);
+        }
+        return false;
+      })
+    );
+  }
   editarSuino(id: string, suino: Suino) {
     return this.http.put(
       `https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos/${id}.json`,

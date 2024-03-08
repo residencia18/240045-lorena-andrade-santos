@@ -28,7 +28,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
-
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -36,8 +36,8 @@ const routes: Routes = [
   { path: 'cadastrarAnimal', component: CadastrarComponent },
   { path: 'listarAnimal', component: ListarComponent },
   { path: 'cadastrarPeso', component: CadastroPesoComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
-  //{ path: 'editarAnimal/:id', component: EditarComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+ { path: 'editarAnimal/:id', component: EditarComponent }
   // { path: 'editarPeso/:id',  component: EditarPesoComponent},
 ];
 
@@ -65,6 +65,7 @@ const routes: Routes = [
     MatNativeDateModule,
     MatCardModule,
     MatSelectModule,
+    MatTableModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
