@@ -19,16 +19,13 @@
         </button>
         <mat-error *ngIf="formLogin.get('senha')?.hasError">senha deve conter um valor válido</mat-error>
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="login()" [disabled]="!formLogin.valid">Entrar</button>
+      <button mat-raised-button color="primary"  [disabled]="!formLogin.valid" (click)="isLogin ? login() : register()"
+      [class.align-right]="!isLogin" [disabled]="!formLogin.valid">{{
+      isLogin ? 'Entrar' : 'Registrar e Entrar' }}</button><br>
+      <button mat-raised-button color="basic" class="full" (click)="redirectToRegister()" *ngIf="isLogin">Novo Cadastro</button>
     </mat-card>
   </div>
-  <mat-card-actions align="end" class="button-container">
-    <button mat-raised-button color="basic" class="full" align="end" (click)="redirectToRegister()"
-      *ngIf="isLogin">Novo Cadastro</button>
-
-      
-      <button mat-raised-button color="primary" class="full" align="end" (click)="isLogin ? login() : register()"
-        [class.align-right]="!isLogin" [disabled]="!formLogin.valid">{{
-        isLogin ? 'Entrar' : 'Registrar' }}</button>
-  </mat-card-actions>
 </div>
+
+
+

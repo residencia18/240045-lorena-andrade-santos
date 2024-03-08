@@ -26,7 +26,6 @@ export class CadastrarComponent implements OnInit {
 
   adicionarSuino(event: Event) {
     if (this.suinoForm.valid) {
-      console.log(this.suinoForm.value);
       this.servico.adicionarSuino(this.suinoForm.value);
       this.suinoForm.reset();
     } else {

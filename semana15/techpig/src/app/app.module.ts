@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth/auth.interceptor';
-import { initializeApp, getApps} from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 //@angular/material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'listarAnimal', component: ListarComponent },
   { path: 'cadastrarPeso', component: CadastroPesoComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
- { path: 'editarAnimal/:id', component: EditarComponent }
+  { path: 'editarAnimal', component: EditarComponent }
   // { path: 'editarPeso/:id',  component: EditarPesoComponent},
 ];
 

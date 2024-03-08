@@ -1,7 +1,7 @@
 // PetShop/src/app/banco.service.ts
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, exhaustMap, map, take } from 'rxjs';
+import { Observable, catchError, exhaustMap, map, of, take, tap } from 'rxjs';
 import { Suino } from './Models/suino';
 import { PesoSuino } from './Models/pesoSuino';
 
@@ -11,7 +11,7 @@ import { PesoSuino } from './Models/pesoSuino';
 
 export class BancoService {
 
-  apiURL = 'https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos.json';
+  apiURL = 'https://techpig-3d8dc-default-rtdb.firebaseio.com/';
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +24,7 @@ export class BancoService {
   }
 
   getSuinos() {
-    return this.http.get<{ [key: string]: Suino }>('https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos.json').pipe(
+    return this.http.get<{ [key: string]: Suino }>(`${this.apiURL}/suinos.json`).pipe(
       map((responseData) => {
         const listaArray: Suino[] = [];
         for (const key in responseData) {
@@ -40,17 +40,37 @@ export class BancoService {
 
 
   apagarTodosSuinos() {
-    return this.http.delete('https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos.json');
+    return this.http.delete(`${this.apiURL}/suinos.json`);
   }
 
-  getSuino(id: string) {
-    return this.http.get<Suino>(
-      `https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos/${id}.json`
-    );
+  // getSuino(id: string) {
+  //   const result = this.http.get<Suino>(
+  //     `https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos/${id}.json`
+  //   );
+  //   console.log(result);
+  //   return result;
+  // }
+
+  getSuino(id: string): Observable<Suino> {
+    const url = `${this.apiURL}/suinos/${id}.json`;
+    return this.http.get<Suino>(url)
+      .pipe(
+        tap((suino: Suino) => {
+          console.log('Detalhes do Suíno:', suino);
+        }),
+        catchError(this.handleError<any>('getSuino'))
+      );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      // Mantenha a aplicação em execução, mas emita um erro
+      return of(result as T);
+    };
   }
   verificarBrincoExistente(brinco: string): Observable<boolean> {
-    const url = 'https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos.json';
-
+    const url = `${this.apiURL}/suinos.json`;
     return this.http.get<any>(url).pipe(
       map((suinos: any) => {
         if (suinos) {
@@ -62,8 +82,8 @@ export class BancoService {
     );
   }
   editarSuino(id: string, suino: Suino) {
-    return this.http.put(
-      `https://techpig-3d8dc-default-rtdb.firebaseio.com/suinos/${id}.json`,
+    const url = `${this.apiURL}/suinos/${id}.json`;
+    return this.http.put(url,
       suino,
       { observe: 'response' }
     );
