@@ -25,7 +25,7 @@ export class BancoService {
   }
   ) {
     return this.http.post(this.apiURL, atendimento).subscribe(
-      (response) => {
+      (response: any) => {
         console.log(response);
       }
     );
