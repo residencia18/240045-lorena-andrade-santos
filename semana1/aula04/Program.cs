@@ -3,7 +3,7 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         #region Exercicio 1 - Delegates
 
@@ -84,17 +84,31 @@ class Program
         #endregion
 
         #region Exercicio 4 - Async/Await
-            
+        
+            await DoWorkAsync("Tarefa 1");
+            await DoWorkAsync("Tarefa 2");
+        
+            Console.WriteLine("Ambas as tarefas foram concluídas.");
         #endregion
     }
-     static void Run(object param)
+    static void Run(object param)
+    {
+        string p = (string)param;
+        for (int i = 1; i <= 10; i++)
         {
-            string p = (string)param;
-            for (int i = 1; i <= 10; i++)
-            {
-                Console.WriteLine($"O {Thread.CurrentThread.Name} está realizando o trabalho {i}/10");
-                Thread.Sleep(1000);
-            }
-            Thread.Sleep(500);
+            Console.WriteLine($"O {Thread.CurrentThread.Name} está realizando o trabalho {i}/10");
+            Thread.Sleep(1000);
         }
+        Thread.Sleep(500);
+    }
+    static async Task DoWorkAsync(string taskName)
+    {
+        Console.WriteLine($"Iniciando a execução da {taskName}...");
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine($"Executando {taskName} - Progresso: {i}/10");
+            await Task.Delay(500);
+        }
+        Console.WriteLine($"A {taskName} foi concluída.");
+    }
 }
