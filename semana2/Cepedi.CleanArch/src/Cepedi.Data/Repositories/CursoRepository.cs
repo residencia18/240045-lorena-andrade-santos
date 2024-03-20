@@ -18,7 +18,14 @@ namespace Cepedi.Data
         {
             _context = context;
         }
-       public async Task<CursoEntity> ObtemCursoPorIdAsync(int idCurso) => 
+
+        public Task<int> AlterarCursoAsync(CursoEntity curso)
+        {
+            _context.Curso.Update(curso);
+            return _context.SaveChangesAsync();
+        }
+
+        public async Task<CursoEntity> ObtemCursoPorIdAsync(int idCurso) => 
         await _context.Curso.Where(curso => curso.Id == idCurso).FirstOrDefaultAsync();
 
         public async Task<List<CursoEntity>> ObtemCursosAsync()
@@ -31,5 +38,6 @@ namespace Cepedi.Data
             _context.Curso.Add(curso);
             return _context.SaveChangesAsync();
         }
+        
     }
 }
