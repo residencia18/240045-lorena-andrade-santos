@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cepedi.Domain.Entities;
+using Cepedi.Shareable.Requests;
 
-namespace Cepedi.Domain.Repository;
-internal interface ICursoRepository
+namespace Cepedi.Domain;
+
+public interface ICursoRepository
 {
-    Task<CursoEn>
+    Task<CursoEntity> ObtemCursoPorIdAsync(int idCurso);
+    Task<List<CursoEntity>> ObtemCursosAsync();
+    Task<int> CriaNovoCursoAsync(CursoEntity curso);
 }
